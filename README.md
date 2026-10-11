@@ -17,5 +17,6 @@ Mettre aussi à jour le compteur « N outils en ligne » en haut de la page.
 | Distributeur de céréales | https://anlito.github.io/atelier-cereales/ | Anlito/atelier-cereales |
 | Concept Store 3D | https://anlito.github.io/concept-store-3d/ | Anlito/concept-store-3d |
 | Site vitrine | https://anlito.github.io/creation-site-vitrine/ | Anlito/creation-site-vitrine |
+| Concept Store · Professeur (réservé au professeur) | https://anlito.github.io/concept-store-prof/ | Anlito/concept-store-prof |
 | Théâtre d'ombre | https://anlito.github.io/theatre-ombre/ | Anlito/theatre-ombre |
 | Gestion de classe | https://anlito.github.io/gestion-de-classe-et-suivi-projet/ | Anlito/gestion-de-classe-et-suivi-projet |
