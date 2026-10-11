@@ -66,6 +66,12 @@ h2 { font-family: var(--display); font-weight: 700; font-size: 1.3rem; line-heig
 .more a { color: var(--ink); text-decoration: none; font-size: .92rem; display: inline-flex; gap: 6px; align-items: baseline; }
 .more a::before { content: "→"; color: var(--c); }
 .more a:hover { text-decoration: underline; text-decoration-color: var(--c); text-underline-offset: 3px; }
+.prof { display: flex; gap: 10px; align-items: flex-start; background: color-mix(in srgb, var(--c) 9%, transparent); border-radius: 10px; padding: 10px 12px; font-size: .9rem; }
+.prof svg { flex: none; width: 18px; height: 18px; color: var(--c); margin-top: 2px; }
+.prof strong { display: block; font-size: .72rem; text-transform: uppercase; letter-spacing: .08em; color: var(--c); }
+.prof p { margin: 0; }
+.prof a { color: var(--ink); font-weight: 700; text-underline-offset: 3px; text-decoration-color: var(--c); }
+.only-prof { font-size: .72rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: var(--c); border: 1px solid currentColor; border-radius: 999px; padding: 1px 8px; margin-left: 8px; vertical-align: 3px; white-space: nowrap; }
 a:focus-visible, button:focus-visible { outline: 3px solid var(--c, var(--accent)); outline-offset: 2px; }
 footer { margin-top: 32px; color: var(--muted); font-size: .85rem; }
 </style>
@@ -93,6 +99,7 @@ footer { margin-top: 32px; color: var(--muted); font-size: .85rem; }
         <button class="copy" type="button" data-url="https://anlito.github.io/atelier-cereales/">Copier le lien</button>
       </div>
       <p class="url">anlito.github.io/atelier-cereales</p>
+      <div class="prof"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="15" r="4"/><path d="m11 12 9-9M17 6l3 3M14 9l2 2"/></svg><div><strong>Accès professeur</strong><p><a href="https://anlito.github.io/atelier-cereales/prof.html" target="_blank" rel="noopener">Ouvrir l'outil professeur</a> : import des travaux, suivi en direct, notes et exports.</p></div></div>
       <div class="more">
         <h3>Documents</h3>
         <ul>
@@ -135,6 +142,7 @@ footer { margin-top: 32px; color: var(--muted); font-size: .85rem; }
         <button class="copy" type="button" data-url="https://anlito.github.io/creation-site-vitrine/">Copier le lien</button>
       </div>
       <p class="url">anlito.github.io/creation-site-vitrine</p>
+      <div class="prof"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="15" r="4"/><path d="m11 12 9-9M17 6l3 3M14 9l2 2"/></svg><div><strong>Accès professeur</strong><p>Bouton « Espace enseignant » en bas à droite de l'accueil, protégé par mot de passe.</p></div></div>
       <div class="more">
         <h3>Documents</h3>
         <ul>
@@ -157,6 +165,7 @@ footer { margin-top: 32px; color: var(--muted); font-size: .85rem; }
         <button class="copy" type="button" data-url="https://anlito.github.io/theatre-ombre/">Copier le lien</button>
       </div>
       <p class="url">anlito.github.io/theatre-ombre</p>
+      <div class="prof"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="15" r="4"/><path d="m11 12 9-9M17 6l3 3M14 9l2 2"/></svg><div><strong>Accès professeur</strong><p>Lien « Mode professeur » en bas de l'outil, protégé par un code : niveau, verrouillage pour les évaluations, broches des LED.</p></div></div>
       <div class="more">
         <h3>Pages utiles</h3>
         <ul>
@@ -172,9 +181,9 @@ footer { margin-top: 32px; color: var(--muted); font-size: .85rem; }
     <article class="tool" style="--c: var(--c-classe)">
       <div class="top">
         <div class="badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="3"/><circle cx="17" cy="9" r="2.4"/><path d="M2.5 19c.6-3.2 2.8-5 5.5-5s4.9 1.8 5.5 5M14 14.6c.9-.4 1.9-.6 3-.6 2.3 0 4 1.5 4.5 4.5"/></svg></div>
-        <div><div class="kind">Suivi des élèves</div><h2>Gestion de classe</h2></div>
+        <div><div class="kind">Suivi des élèves</div><h2>Gestion de classe<span class="only-prof">Professeur</span></h2></div>
       </div>
-      <p class="desc">Gestion de classe et suivi des projets des élèves.</p>
+      <p class="desc">Gestion de classe et suivi des projets des élèves. Outil réservé au professeur, à ne pas donner aux élèves.</p>
       <div class="actions">
         <a class="open" href="https://anlito.github.io/gestion-de-classe-et-suivi-projet/" target="_blank" rel="noopener">Ouvrir l'outil</a>
         <button class="copy" type="button" data-url="https://anlito.github.io/gestion-de-classe-et-suivi-projet/">Copier le lien</button>
@@ -190,7 +199,7 @@ footer { margin-top: 32px; color: var(--muted); font-size: .85rem; }
     </article>
   </main>
 
-  <footer>Les liens « Ouvrir l'outil » sont publics : on peut les donner aux élèves. Les documents (briefs, cahiers des charges) restent privés.</footer>
+  <footer>Les liens « Ouvrir l'outil » sont publics : on peut les donner aux élèves, sauf la gestion de classe. Les documents (briefs, cahiers des charges) restent privés.</footer>
 </div>
 
 <script>
