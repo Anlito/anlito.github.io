@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Les outils pédagogiques de Thomas : distributeur de céréales, Concept Store 3D, site vitrine, théâtre d'ombre, gestion de classe.">
+<style>:root{color-scheme:light}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Mes outils de classe</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Atkinson+Hyperlegible:wght@400;700&display=swap">
+<style>
+/* Layout : un en-tête sobre, puis une grille de fiches-outils (une couleur par outil), liens secondaires en bas de chaque fiche */
+:root {
+  --bg: #f3f5f8;
+  --surface: #ffffff;
+  --ink: #1b2433;
+  --muted: #5a6577;
+  --line: #dde2ea;
+  --accent: #2f5bd3;
+  --c-cereales: #d98a12;
+  --c-3d: #2f8f6b;
+  --c-site: #c2410c;
+  --c-ombre: #6d4bc4;
+  --c-classe: #1f7fb8;
+  --display: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --body: "Atkinson Hyperlegible", "Segoe UI", system-ui, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #11151d; --surface: #1a202b; --ink: #e8ecf3; --muted: #9aa5b6; --line: #2b3342; --accent: #7c9cff;
+    --c-cereales: #f0a83a; --c-3d: #4fc095; --c-site: #f07a45; --c-ombre: #a68bf0; --c-classe: #4fb0e8;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #11151d; --surface: #1a202b; --ink: #e8ecf3; --muted: #9aa5b6; --line: #2b3342; --accent: #7c9cff;
+  --c-cereales: #f0a83a; --c-3d: #4fc095; --c-site: #f07a45; --c-ombre: #a68bf0; --c-classe: #4fb0e8;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font-family: var(--body); font-size: 16px; line-height: 1.5; }
+.wrap { max-width: 1120px; margin: 0 auto; padding-inline: 20px; padding-block: 40px 56px; }
+header { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 12px 24px; margin-bottom: 28px; }
+h1 { font-family: var(--display); font-weight: 700; font-size: clamp(1.9rem, 4vw, 2.6rem); line-height: 1.1; margin: 0; text-wrap: balance; letter-spacing: -0.01em; }
+.sub { color: var(--muted); margin: 6px 0 0; max-width: 60ch; }
+.count { font-size: .8rem; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 330px), 1fr)); gap: 18px; }
+.tool { --c: var(--accent); background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 20px; display: flex; flex-direction: column; gap: 14px; min-width: 0; }
+.top { display: flex; gap: 14px; align-items: flex-start; }
+.badge { flex: none; width: 46px; height: 46px; border-radius: 12px; background: color-mix(in srgb, var(--c) 16%, transparent); color: var(--c); display: grid; place-items: center; }
+.badge svg { width: 26px; height: 26px; }
+h2 { font-family: var(--display); font-weight: 700; font-size: 1.3rem; line-height: 1.2; margin: 2px 0 2px; }
+.kind { font-size: .75rem; text-transform: uppercase; letter-spacing: .08em; color: var(--c); font-weight: 700; }
+.desc { margin: 0; color: var(--muted); font-size: .95rem; }
+.actions { display: flex; flex-wrap: wrap; gap: 8px; }
+.open { display: inline-flex; align-items: center; gap: 8px; background: var(--c); color: #fff; text-decoration: none; font-weight: 700; padding: 10px 16px; border-radius: 10px; }
+.open:hover { filter: brightness(1.08); }
+:root[data-theme="dark"] .open { color: #10141b; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .open { color: #10141b; } }
+.copy { font: inherit; font-size: .9rem; background: transparent; color: var(--ink); border: 1px solid var(--line); padding: 9px 14px; border-radius: 10px; cursor: pointer; }
+.copy:hover { border-color: var(--c); }
+.url { font-size: .8rem; color: var(--muted); word-break: break-all; margin: -6px 0 0; }
+.more { border-top: 1px solid var(--line); padding-top: 12px; margin-top: auto; }
+.more h3 { font-size: .72rem; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); margin: 0 0 6px; font-weight: 700; }
+.more ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 4px; }
+.more a { color: var(--ink); text-decoration: none; font-size: .92rem; display: inline-flex; gap: 6px; align-items: baseline; }
+.more a::before { content: "→"; color: var(--c); }
+.more a:hover { text-decoration: underline; text-decoration-color: var(--c); text-underline-offset: 3px; }
+a:focus-visible, button:focus-visible { outline: 3px solid var(--c, var(--accent)); outline-offset: 2px; }
+footer { margin-top: 32px; color: var(--muted); font-size: .85rem; }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header>
+    <div>
+      <h1>Mes outils de classe</h1>
+      <p class="sub">Tous les outils créés pour mes élèves, au même endroit. Un clic pour ouvrir, un autre pour copier le lien à partager.</p>
+    </div>
+    <span class="count">5 outils en ligne</span>
+  </header>
+
+  <main class="grid">
+    <article class="tool" style="--c: var(--c-cereales)">
+      <div class="top">
+        <div class="badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2.5" width="12" height="10" rx="2"/><path d="M9 12.5v3h6v-3M12 15.5v2.5M8 21h8l-1-3H9z"/></svg></div>
+        <div><div class="kind">Programmation par blocs</div><h2>Distributeur de céréales</h2></div>
+      </div>
+      <p class="desc">Atelier de blocs pour programmer le distributeur de céréales.</p>
+      <div class="actions">
+        <a class="open" href="https://anlito.github.io/atelier-cereales/" target="_blank" rel="noopener">Ouvrir l'outil</a>
+        <button class="copy" type="button" data-url="https://anlito.github.io/atelier-cereales/">Copier le lien</button>
+      </div>
+      <p class="url">anlito.github.io/atelier-cereales</p>
+      <div class="more">
+        <h3>Documents</h3>
+        <ul>
+          <li><a href="https://claude.ai/artifact/X61EJcRtzABrkDkPRvKRzR" target="_blank" rel="noopener">Brief de développement</a></li>
+          <li><a href="https://claude.ai/artifact/6GiaGdtkiRumaNbKo3gFXA" target="_blank" rel="noopener">Brief des maquettes</a></li>
+          <li><a href="https://github.com/Anlito/atelier-cereales" target="_blank" rel="noopener">Code source (GitHub)</a></li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="tool" style="--c: var(--c-3d)">
+      <div class="top">
+        <div class="badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M12 2.5 20.5 7v10L12 21.5 3.5 17V7z"/><path d="M3.5 7 12 11.5 20.5 7M12 11.5v10"/></svg></div>
+        <div><div class="kind">Modélisation 3D</div><h2>Concept Store 3D</h2></div>
+      </div>
+      <p class="desc">Les élèves aménagent leur concept store en 3D.</p>
+      <div class="actions">
+        <a class="open" href="https://anlito.github.io/concept-store-3d/" target="_blank" rel="noopener">Ouvrir l'outil</a>
+        <button class="copy" type="button" data-url="https://anlito.github.io/concept-store-3d/">Copier le lien</button>
+      </div>
+      <p class="url">anlito.github.io/concept-store-3d</p>
+      <div class="more">
+        <h3>Documents</h3>
+        <ul>
+          <li><a href="https://claude.ai/artifact/R5zDREM5fqnTPUSttmab9j" target="_blank" rel="noopener">Guide de l'enseignant</a></li>
+          <li><a href="https://claude.ai/artifact/Jh7GsS5fVe88Rx258Ps1yQ" target="_blank" rel="noopener">Cahier des charges</a></li>
+          <li><a href="https://github.com/Anlito/concept-store-3d" target="_blank" rel="noopener">Code source (GitHub)</a></li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="tool" style="--c: var(--c-site)">
+      <div class="top">
+        <div class="badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="4" width="19" height="16" rx="2"/><path d="M2.5 8.5h19M6 12.5h6M6 16h4M15 12.5h3v3.5h-3z"/></svg></div>
+        <div><div class="kind">Création web</div><h2>Site vitrine</h2></div>
+      </div>
+      <p class="desc">Créateur de site vitrine pour le Concept Store 4.0.</p>
+      <div class="actions">
+        <a class="open" href="https://anlito.github.io/creation-site-vitrine/" target="_blank" rel="noopener">Ouvrir l'outil</a>
+        <button class="copy" type="button" data-url="https://anlito.github.io/creation-site-vitrine/">Copier le lien</button>
+      </div>
+      <p class="url">anlito.github.io/creation-site-vitrine</p>
+      <div class="more">
+        <h3>Documents</h3>
+        <ul>
+          <li><a href="https://claude.ai/artifact/KriH7f4UPhbrs56eCXB7rj" target="_blank" rel="noopener">Brief du générateur</a></li>
+          <li><a href="https://claude.ai/artifact/Aw7bxudVAoDAoLhTQAwPUr" target="_blank" rel="noopener">Brief de développement</a></li>
+          <li><a href="https://claude.ai/artifact/AWF1v37cjpRqjHPLrrb73o" target="_blank" rel="noopener">Brief des maquettes</a></li>
+          <li><a href="https://github.com/Anlito/creation-site-vitrine" target="_blank" rel="noopener">Code source (GitHub)</a></li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="tool" style="--c: var(--c-ombre)">
+      <div class="top">
+        <div class="badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 3.5h16M5 3.5v15M19 3.5v15M3 18.5h18"/><path d="M9.5 15c0-2 1-3 2.5-3s2.5 1 2.5 3M12 12V9.5"/><circle cx="12" cy="8" r="1.5"/></svg></div>
+        <div><div class="kind">Arduino &amp; IA</div><h2>Théâtre d'ombre</h2></div>
+      </div>
+      <p class="desc">Théâtre d'ombre augmenté, programmé en blocs.</p>
+      <div class="actions">
+        <a class="open" href="https://anlito.github.io/theatre-ombre/" target="_blank" rel="noopener">Ouvrir l'outil</a>
+        <button class="copy" type="button" data-url="https://anlito.github.io/theatre-ombre/">Copier le lien</button>
+      </div>
+      <p class="url">anlito.github.io/theatre-ombre</p>
+      <div class="more">
+        <h3>Pages utiles</h3>
+        <ul>
+          <li><a href="https://anlito.github.io/theatre-ombre/cablage.html" target="_blank" rel="noopener">Schéma de câblage</a></li>
+          <li><a href="https://anlito.github.io/theatre-ombre/comprendre-ia.html" target="_blank" rel="noopener">Comprendre l'IA</a></li>
+          <li><a href="https://anlito.github.io/theatre-ombre/diagnostic.html" target="_blank" rel="noopener">Diagnostic</a></li>
+          <li><a href="https://claude.ai/artifact/CQPrNGZyHZiP3aycEZsAD3" target="_blank" rel="noopener">Cahier des charges</a></li>
+          <li><a href="https://github.com/Anlito/theatre-ombre" target="_blank" rel="noopener">Code source (GitHub)</a></li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="tool" style="--c: var(--c-classe)">
+      <div class="top">
+        <div class="badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="3"/><circle cx="17" cy="9" r="2.4"/><path d="M2.5 19c.6-3.2 2.8-5 5.5-5s4.9 1.8 5.5 5M14 14.6c.9-.4 1.9-.6 3-.6 2.3 0 4 1.5 4.5 4.5"/></svg></div>
+        <div><div class="kind">Suivi des élèves</div><h2>Gestion de classe</h2></div>
+      </div>
+      <p class="desc">Gestion de classe et suivi des projets des élèves.</p>
+      <div class="actions">
+        <a class="open" href="https://anlito.github.io/gestion-de-classe-et-suivi-projet/" target="_blank" rel="noopener">Ouvrir l'outil</a>
+        <button class="copy" type="button" data-url="https://anlito.github.io/gestion-de-classe-et-suivi-projet/">Copier le lien</button>
+      </div>
+      <p class="url">anlito.github.io/gestion-de-classe-et-suivi-projet</p>
+      <div class="more">
+        <h3>Documents</h3>
+        <ul>
+          <li><a href="https://claude.ai/artifact/6oYpiw9RmurcGQ6CqqCZ2H" target="_blank" rel="noopener">Cahier des charges</a></li>
+          <li><a href="https://github.com/Anlito/gestion-de-classe-et-suivi-projet" target="_blank" rel="noopener">Code source (GitHub)</a></li>
+        </ul>
+      </div>
+    </article>
+  </main>
+
+  <footer>Les liens « Ouvrir l'outil » sont publics : on peut les donner aux élèves. Les documents (briefs, cahiers des charges) restent privés.</footer>
+</div>
+
+<script>
+document.querySelectorAll(".copy").forEach(function (btn) {
+  btn.addEventListener("click", function () {
+    var url = btn.dataset.url, label = btn.textContent;
+    function done(msg) { btn.textContent = msg; setTimeout(function () { btn.textContent = label; }, 1800); }
+    function fallback() {
+      var p = btn.closest(".tool").querySelector(".url");
+      var r = document.createRange(); r.selectNodeContents(p);
+      var s = getSelection(); s.removeAllRanges(); s.addRange(r);
+      done("Sélectionné, faites Ctrl+C");
+    }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(url).then(function () { done("Lien copié"); }, fallback);
+    } else { fallback(); }
+  });
+});
+</script>
+</body>
+</html>
