@@ -21,7 +21,8 @@ Mettre à jour les compteurs (« N projets · N outils » en haut, « N outils �
 | Concept Store | Concept Store 3D | https://anlito.github.io/concept-store-3d/ |
 | Concept Store | Site vitrine | https://anlito.github.io/creation-site-vitrine/ |
 | Concept Store | Concept Store · Professeur | https://anlito.github.io/concept-store-prof/ |
-| Distributeur de céréales | Atelier de blocs (+ `prof.html`) | https://anlito.github.io/atelier-cereales/ |
+| Distributeur de céréales | Atelier de blocs | https://anlito.github.io/atelier-cereales/ |
+| Distributeur de céréales | Distributeur de céréales · Professeur | https://anlito.github.io/atelier-cereales/prof.html |
 | Théâtre d'ombre | Théâtre d'ombre augmenté | https://anlito.github.io/theatre-ombre/ |
 | Théâtre d'ombre | Théâtre d'ombre · Professeur | https://anlito.github.io/theatre-ombre/professeur.html |
 | Toute l'année | Carnet de classe | https://anlito.github.io/gestion-de-classe-et-suivi-projet/ |
