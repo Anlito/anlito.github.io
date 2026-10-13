@@ -2,6 +2,8 @@
 
 Page d'accueil qui regroupe tous mes outils pédagogiques, rangés par projet : https://anlito.github.io/
 
+La plupart des outils sont sur GitHub Pages (`anlito.github.io/…`). Robot Rush a besoin d'un serveur : il est hébergé sur Render (`robot-rush.onrender.com`).
+
 Elle est mise en ligne automatiquement par GitHub Pages à chaque envoi sur la branche `main`.
 
 ## Ajouter un nouvel outil
@@ -25,4 +27,6 @@ Mettre à jour les compteurs (« N projets · N outils » en haut, « N outils �
 | Distributeur de céréales | Distributeur de céréales · Professeur | https://anlito.github.io/atelier-cereales/prof.html |
 | Théâtre d'ombre | Théâtre d'ombre augmenté | https://anlito.github.io/theatre-ombre/ |
 | Théâtre d'ombre | Théâtre d'ombre · Professeur | https://anlito.github.io/theatre-ombre/professeur.html |
+| Robot Rush | Robot Rush · Jouer (élèves, hébergé sur Render) | https://robot-rush.onrender.com/jouer |
+| Robot Rush | Robot Rush · Professeur | https://robot-rush.onrender.com/admin |
 | Toute l'année | Carnet de classe | https://anlito.github.io/gestion-de-classe-et-suivi-projet/ |

@@ -21,19 +21,20 @@
   --c-cereales: #c27a0c;
   --c-ombre: #6d4bc4;
   --c-classe: #1f7fb8;
+  --c-rush: #cf3f35;
   --display: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
   --body: "Atkinson Hyperlegible", "Segoe UI", system-ui, sans-serif;
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
     --bg: #11151d; --surface: #1a202b; --ink: #e8ecf3; --muted: #9aa5b6; --line: #2b3342; --accent: #7c9cff;
-    --c-store: #4fc095; --c-cereales: #f0a83a; --c-ombre: #a68bf0; --c-classe: #4fb0e8;
+    --c-store: #4fc095; --c-cereales: #f0a83a; --c-ombre: #a68bf0; --c-classe: #4fb0e8; --c-rush: #f2766c;
     color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
   --bg: #11151d; --surface: #1a202b; --ink: #e8ecf3; --muted: #9aa5b6; --line: #2b3342; --accent: #7c9cff;
-  --c-store: #4fc095; --c-cereales: #f0a83a; --c-ombre: #a68bf0; --c-classe: #4fb0e8;
+  --c-store: #4fc095; --c-cereales: #f0a83a; --c-ombre: #a68bf0; --c-classe: #4fb0e8; --c-rush: #f2766c;
   color-scheme: dark;
 }
 * { box-sizing: border-box; }
@@ -97,13 +98,14 @@ footer { margin-top: 12px; padding-top: 20px; border-top: 1px solid var(--line);
       <h1>Mes outils de classe</h1>
       <p class="sub">Tous les outils créés pour mes élèves, rangés par projet. Un clic pour ouvrir, un autre pour copier le lien à partager.</p>
     </div>
-    <span class="count">4 projets · 8 outils</span>
+    <span class="count">5 projets · 10 outils</span>
   </header>
 
   <nav class="jump" aria-label="Aller au projet">
     <a href="#concept-store" style="--c: var(--c-store)">Concept Store</a>
     <a href="#cereales" style="--c: var(--c-cereales)">Distributeur de céréales</a>
     <a href="#theatre" style="--c: var(--c-ombre)">Théâtre d'ombre</a>
+    <a href="#robot-rush" style="--c: var(--c-rush)">Robot Rush</a>
     <a href="#classe" style="--c: var(--c-classe)">Gestion de classe</a>
   </nav>
 
@@ -283,6 +285,60 @@ footer { margin-top: 12px; padding-top: 20px; border-top: 1px solid var(--line);
             <h4>Documents</h4>
             <ul>
               <li><a href="https://github.com/Anlito/theatre-ombre#outil-professeur-suivi-et-notation" target="_blank" rel="noopener">Mode d'emploi (GitHub)</a></li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== Projet Robot Rush ===== -->
+    <section class="project" id="robot-rush" style="--c: var(--c-rush)">
+      <div class="p-head">
+        <div class="p-level">Jeu · 5e à 3e, SEGPA</div>
+        <h2>Robot Rush</h2>
+        <p>Course d'équipes en direct, projetée en classe : chaque bonne réponse fait avancer son robot, prendre une solution ou attaquer une autre équipe.</p>
+        <span class="n">2 outils</span>
+      </div>
+      <div class="tools">
+        <article class="tool">
+          <div class="top">
+            <div class="badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="8" width="14" height="10" rx="2.5"/><path d="M12 8V5M10 4.5h4M9.5 12.5v1M14.5 12.5v1M2.5 12v3M21.5 12v3M8 21h8"/></svg></div>
+            <div><div class="kind">Élèves · Jeu en équipes</div><h3>Robot Rush · Jouer</h3></div>
+          </div>
+          <p class="desc">Les élèves entrent le code de leur équipe et un pseudo, puis répondent aux questions sur leur ordinateur.</p>
+          <div class="actions">
+            <a class="open" href="https://robot-rush.onrender.com/jouer" target="_blank" rel="noopener">Ouvrir le jeu</a>
+            <button class="copy" type="button" data-url="https://robot-rush.onrender.com/jouer">Copier le lien</button>
+          </div>
+          <p class="url">robot-rush.onrender.com/jouer</p>
+          <div class="prof"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="15" r="4"/><path d="m11 12 9-9M17 6l3 3M14 9l2 2"/></svg><div><strong>Avant le cours</strong><p>Le jeu se met en veille après 15 minutes sans visite : ouvrir l'écran projecteur deux minutes avant le début du cours.</p></div></div>
+          <div class="more">
+            <h4>Pages utiles</h4>
+            <ul>
+              <li><a href="https://robot-rush.onrender.com/course" target="_blank" rel="noopener">Écran projecteur (la course)</a></li>
+              <li><a href="https://github.com/Anlito/robot-rush" target="_blank" rel="noopener">Code source (GitHub)</a></li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="tool is-prof">
+          <div class="top">
+            <div class="badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3.5" width="16" height="18" rx="2"/><path d="M9 3.5V2h6v1.5M8 9.5l1.5 1.5 3-3M8 15.5l1.5 1.5 3-3M15 10h2M15 16h2"/></svg></div>
+            <div><div class="kind">Animation de la partie</div><h3>Robot Rush · Professeur<span class="only-prof">Professeur</span></h3></div>
+          </div>
+          <p class="desc">Parcours, questions, équipes et codes, élèves ; Démarrer, Pause, Arrêter. Protégé par mot de passe.</p>
+          <div class="actions">
+            <a class="open" href="https://robot-rush.onrender.com/admin" target="_blank" rel="noopener">Ouvrir l'outil</a>
+            <button class="copy" type="button" data-url="https://robot-rush.onrender.com/admin">Copier le lien</button>
+          </div>
+          <p class="url">robot-rush.onrender.com/admin</p>
+          <div class="more">
+            <h4>Pages utiles</h4>
+            <ul>
+              <li><a href="https://robot-rush.onrender.com/course" target="_blank" rel="noopener">Écran projecteur (la course)</a></li>
+              <li><a href="https://robot-rush.onrender.com/test" target="_blank" rel="noopener">Diagnostic du réseau (depuis un poste élève)</a></li>
+              <li><a href="https://github.com/Anlito/robot-rush/blob/main/DEPLOIEMENT.md" target="_blank" rel="noopener">Mise en ligne et sauvegarde des questions</a></li>
+              <li><a href="https://github.com/Anlito/robot-rush/blob/main/MODE-LOCAL.md" target="_blank" rel="noopener">Plan B : le jeu sur le PC, sans internet</a></li>
             </ul>
           </div>
         </article>
