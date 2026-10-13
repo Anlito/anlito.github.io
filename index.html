@@ -22,6 +22,9 @@
   --c-ombre: #6d4bc4;
   --c-classe: #1f7fb8;
   --c-rush: #cf3f35;
+  --prof: #262c3a;
+  --prof-fg: #ffffff;
+  --prof-surface: #e9ecf2;
   --display: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
   --body: "Atkinson Hyperlegible", "Segoe UI", system-ui, sans-serif;
 }
@@ -29,12 +32,14 @@
   :root:not([data-theme="light"]) {
     --bg: #11151d; --surface: #1a202b; --ink: #e8ecf3; --muted: #9aa5b6; --line: #2b3342; --accent: #7c9cff;
     --c-store: #4fc095; --c-cereales: #f0a83a; --c-ombre: #a68bf0; --c-classe: #4fb0e8; --c-rush: #f2766c;
+    --prof: #dfe4ee; --prof-fg: #141925; --prof-surface: #222937;
     color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
   --bg: #11151d; --surface: #1a202b; --ink: #e8ecf3; --muted: #9aa5b6; --line: #2b3342; --accent: #7c9cff;
   --c-store: #4fc095; --c-cereales: #f0a83a; --c-ombre: #a68bf0; --c-classe: #4fb0e8; --c-rush: #f2766c;
+    --prof: #dfe4ee; --prof-fg: #141925; --prof-surface: #222937;
   color-scheme: dark;
 }
 * { box-sizing: border-box; }
@@ -59,7 +64,20 @@ nav.jump a:hover { border-color: var(--c); }
 @media (max-width: 760px) { .project { grid-template-columns: 1fr; } }
 
 .tool { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 18px; display: flex; flex-direction: column; gap: 12px; min-width: 0; }
-.tool.is-prof { border-style: dashed; border-color: color-mix(in srgb, var(--c) 55%, var(--line)); }
+.tool { position: relative; overflow: hidden; padding-top: 0; }
+.who { display: flex; align-items: center; gap: 8px; margin-inline: -18px; padding: 7px 18px; font-size: .78rem; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; background: color-mix(in srgb, var(--c) 14%, transparent); color: var(--c); }
+.who svg { width: 16px; height: 16px; flex: none; }
+.tool.is-prof { background: var(--prof-surface); border: 2px solid var(--prof); }
+.tool.is-prof .who { background: var(--prof); color: var(--prof-fg); }
+.filter { display: inline-flex; flex-wrap: wrap; gap: 4px; padding: 4px; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; }
+.filter button { font: inherit; font-size: .9rem; font-weight: 700; display: inline-flex; align-items: center; gap: 7px; border: 0; background: transparent; color: var(--muted); padding: 7px 14px; border-radius: 9px; cursor: pointer; }
+.filter button svg { width: 16px; height: 16px; }
+.filter button[aria-pressed="true"] { background: var(--ink); color: var(--bg); }
+.filter button[data-f="prof"][aria-pressed="true"] { background: var(--prof); color: var(--prof-fg); }
+.toolbar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 28px; }
+.toolbar nav.jump { margin-bottom: 0; }
+body[data-f="eleves"] .tool.is-prof, body[data-f="prof"] .tool:not(.is-prof), body[data-f="eleves"] .tool .prof { display: none; }
+.project.empty, nav.jump a.empty { display: none; }
 .top { display: flex; gap: 12px; align-items: flex-start; }
 .badge { flex: none; width: 42px; height: 42px; border-radius: 11px; background: color-mix(in srgb, var(--c) 16%, transparent); color: var(--c); display: grid; place-items: center; }
 .badge svg { width: 24px; height: 24px; }
@@ -75,9 +93,9 @@ h3 { font-family: var(--display); font-weight: 700; font-size: 1.2rem; line-heig
 .copy { font: inherit; font-size: .9rem; background: transparent; color: var(--ink); border: 1px solid var(--line); padding: 8px 13px; border-radius: 10px; cursor: pointer; }
 .copy:hover { border-color: var(--c); }
 .url { font-size: .8rem; color: var(--muted); word-break: break-all; margin: -4px 0 0; }
-.prof { display: flex; gap: 10px; align-items: flex-start; background: color-mix(in srgb, var(--c) 9%, transparent); border-radius: 10px; padding: 10px 12px; font-size: .9rem; }
-.prof svg { flex: none; width: 18px; height: 18px; color: var(--c); margin-top: 2px; }
-.prof strong { display: block; font-size: .72rem; text-transform: uppercase; letter-spacing: .08em; color: var(--c); }
+.prof { border-left: 3px solid var(--prof); display: flex; gap: 10px; align-items: flex-start; background: color-mix(in srgb, var(--prof) 8%, transparent); border-radius: 10px; padding: 10px 12px; font-size: .9rem; }
+.prof svg { flex: none; width: 18px; height: 18px; color: var(--ink); margin-top: 2px; }
+.prof strong { display: block; font-size: .72rem; text-transform: uppercase; letter-spacing: .08em; color: var(--ink); }
 .prof p { margin: 0; }
 .prof a { color: var(--ink); font-weight: 700; text-underline-offset: 3px; text-decoration-color: var(--c); }
 .more { border-top: 1px solid var(--line); padding-top: 10px; margin-top: auto; }
@@ -101,6 +119,12 @@ footer { margin-top: 12px; padding-top: 20px; border-top: 1px solid var(--line);
     <span class="count">5 projets · 10 outils</span>
   </header>
 
+  <div class="toolbar">
+    <div class="filter" role="group" aria-label="Afficher les outils">
+      <button type="button" id="f-tout" data-f="tout" aria-pressed="true">Tout</button>
+      <button type="button" id="f-eleves" data-f="eleves" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c0 1.5 3 3 6 3s6-1.5 6-3v-5"/></svg>Élèves</button>
+      <button type="button" id="f-prof" data-f="prof" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="1.5"/><path d="M7 20h10M12 16v4M7 9h6M7 12h4"/></svg>Professeur</button>
+    </div>
   <nav class="jump" aria-label="Aller au projet">
     <a href="#concept-store" style="--c: var(--c-store)">Concept Store</a>
     <a href="#cereales" style="--c: var(--c-cereales)">Distributeur de céréales</a>
@@ -108,6 +132,7 @@ footer { margin-top: 12px; padding-top: 20px; border-top: 1px solid var(--line);
     <a href="#robot-rush" style="--c: var(--c-rush)">Robot Rush</a>
     <a href="#classe" style="--c: var(--c-classe)">Gestion de classe</a>
   </nav>
+  </div>
 
   <main>
     <!-- ===== Projet Concept Store ===== -->
@@ -120,9 +145,10 @@ footer { margin-top: 12px; padding-top: 20px; border-top: 1px solid var(--line);
       </div>
       <div class="tools">
         <article class="tool">
+          <div class="who"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c0 1.5 3 3 6 3s6-1.5 6-3v-5"/></svg>Pour les élèves</div>
           <div class="top">
             <div class="badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M12 2.5 20.5 7v10L12 21.5 3.5 17V7z"/><path d="M3.5 7 12 11.5 20.5 7M12 11.5v10"/></svg></div>
-            <div><div class="kind">Élèves · Modélisation 3D</div><h3>Concept Store 3D</h3></div>
+            <div><div class="kind">Modélisation 3D</div><h3>Concept Store 3D</h3></div>
           </div>
           <p class="desc">Les élèves aménagent leur concept store en 3D et impriment le plan.</p>
           <div class="actions">
@@ -130,7 +156,7 @@ footer { margin-top: 12px; padding-top: 20px; border-top: 1px solid var(--line);
             <button class="copy" type="button" data-url="https://anlito.github.io/concept-store-3d/">Copier le lien</button>
           </div>
           <p class="url">anlito.github.io/concept-store-3d</p>
-          <div class="prof"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="15" r="4"/><path d="m11 12 9-9M17 6l3 3M14 9l2 2"/></svg><div><strong>Accès professeur</strong><p><a href="https://anlito.github.io/concept-store-prof/" target="_blank" rel="noopener">Ouvrir l'outil professeur</a> : la 3D et le site de chaque équipe, notes par grilles, photos des maquettes, export.</p></div></div>
+          <div class="prof"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="15" r="4"/><path d="m11 12 9-9M17 6l3 3M14 9l2 2"/></svg><div><strong>Pour le professeur</strong><p><a href="https://anlito.github.io/concept-store-prof/" target="_blank" rel="noopener">Ouvrir l'outil professeur</a> : la 3D et le site de chaque équipe, notes par grilles, photos des maquettes, export.</p></div></div>
           <div class="more">
             <h4>Documents</h4>
             <ul>
@@ -142,9 +168,10 @@ footer { margin-top: 12px; padding-top: 20px; border-top: 1px solid var(--line);
         </article>
 
         <article class="tool">
+          <div class="who"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c0 1.5 3 3 6 3s6-1.5 6-3v-5"/></svg>Pour les élèves</div>
           <div class="top">
             <div class="badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="4" width="19" height="16" rx="2"/><path d="M2.5 8.5h19M6 12.5h6M6 16h4M15 12.5h3v3.5h-3z"/></svg></div>
-            <div><div class="kind">Élèves · Création web</div><h3>Site vitrine</h3></div>
+            <div><div class="kind">Création web</div><h3>Site vitrine</h3></div>
           </div>
           <p class="desc">Les élèves créent le site internet de leur concept store.</p>
           <div class="actions">
@@ -152,7 +179,7 @@ footer { margin-top: 12px; padding-top: 20px; border-top: 1px solid var(--line);
             <button class="copy" type="button" data-url="https://anlito.github.io/creation-site-vitrine/">Copier le lien</button>
           </div>
           <p class="url">anlito.github.io/creation-site-vitrine</p>
-          <div class="prof"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="15" r="4"/><path d="m11 12 9-9M17 6l3 3M14 9l2 2"/></svg><div><strong>Accès professeur</strong><p>Bouton « Espace enseignant » en bas à droite de l'accueil, protégé par mot de passe.</p></div></div>
+          <div class="prof"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="15" r="4"/><path d="m11 12 9-9M17 6l3 3M14 9l2 2"/></svg><div><strong>Pour le professeur</strong><p>Bouton « Espace enseignant » en bas à droite de l'accueil, protégé par mot de passe.</p></div></div>
           <div class="more">
             <h4>Documents</h4>
             <ul>
@@ -165,9 +192,10 @@ footer { margin-top: 12px; padding-top: 20px; border-top: 1px solid var(--line);
         </article>
 
         <article class="tool is-prof">
+          <div class="who"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="1.5"/><path d="M7 20h10M12 16v4M7 9h6M7 12h4"/></svg>Pour le professeur</div>
           <div class="top">
             <div class="badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3.5" width="16" height="18" rx="2"/><path d="M9 3.5V2h6v1.5M8 9.5l1.5 1.5 3-3M8 15.5l1.5 1.5 3-3M15 10h2M15 16h2"/></svg></div>
-            <div><div class="kind">Évaluation</div><h3>Concept Store · Professeur<span class="only-prof">Professeur</span></h3></div>
+            <div><div class="kind">Évaluation</div><h3>Concept Store · Professeur</h3></div>
           </div>
           <p class="desc">Ouvre le dossier d'une classe : 3D et site de chaque équipe, photos de la maquette carton, notation par grilles (3D, site, maquette, oral), export Excel / Pronote. Chrome ou Edge.</p>
           <div class="actions">
@@ -195,9 +223,10 @@ footer { margin-top: 12px; padding-top: 20px; border-top: 1px solid var(--line);
       </div>
       <div class="tools">
         <article class="tool">
+          <div class="who"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c0 1.5 3 3 6 3s6-1.5 6-3v-5"/></svg>Pour les élèves</div>
           <div class="top">
             <div class="badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2.5" width="12" height="10" rx="2"/><path d="M9 12.5v3h6v-3M12 15.5v2.5M8 21h8l-1-3H9z"/></svg></div>
-            <div><div class="kind">Élèves · Programmation par blocs</div><h3>Atelier de blocs</h3></div>
+            <div><div class="kind">Programmation par blocs</div><h3>Atelier de blocs</h3></div>
           </div>
           <p class="desc">Atelier de blocs pour programmer le distributeur de céréales.</p>
           <div class="actions">
@@ -205,7 +234,7 @@ footer { margin-top: 12px; padding-top: 20px; border-top: 1px solid var(--line);
             <button class="copy" type="button" data-url="https://anlito.github.io/atelier-cereales/">Copier le lien</button>
           </div>
           <p class="url">anlito.github.io/atelier-cereales</p>
-          <div class="prof"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="15" r="4"/><path d="m11 12 9-9M17 6l3 3M14 9l2 2"/></svg><div><strong>Accès professeur</strong><p>Aucun lien depuis l'écran des élèves : passer par la fiche « Distributeur de céréales · Professeur » ci-contre.</p></div></div>
+          <div class="prof"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="15" r="4"/><path d="m11 12 9-9M17 6l3 3M14 9l2 2"/></svg><div><strong>Pour le professeur</strong><p>Aucun lien depuis l'écran des élèves : passer par la fiche « Distributeur de céréales · Professeur » ci-contre.</p></div></div>
           <div class="more">
             <h4>Documents</h4>
             <ul>
@@ -217,9 +246,10 @@ footer { margin-top: 12px; padding-top: 20px; border-top: 1px solid var(--line);
         </article>
 
         <article class="tool is-prof">
+          <div class="who"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="1.5"/><path d="M7 20h10M12 16v4M7 9h6M7 12h4"/></svg>Pour le professeur</div>
           <div class="top">
             <div class="badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3.5" width="16" height="18" rx="2"/><path d="M9 3.5V2h6v1.5M8 9.5l1.5 1.5 3-3M8 15.5l1.5 1.5 3-3M15 10h2M15 16h2"/></svg></div>
-            <div><div class="kind">Suivi et évaluation</div><h3>Distributeur de céréales · Professeur<span class="only-prof">Professeur</span></h3></div>
+            <div><div class="kind">Suivi et évaluation</div><h3>Distributeur de céréales · Professeur</h3></div>
           </div>
           <p class="desc">Ouvre le dossier de la classe : tableau des 13 exercices par équipe, alertes quand une équipe est bloquée, carnet, notes et exports. Le mode enseignant (solutions) s'ouvre depuis le lien en haut de l'outil.</p>
           <div class="actions">
@@ -247,9 +277,10 @@ footer { margin-top: 12px; padding-top: 20px; border-top: 1px solid var(--line);
       </div>
       <div class="tools">
         <article class="tool">
+          <div class="who"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c0 1.5 3 3 6 3s6-1.5 6-3v-5"/></svg>Pour les élèves</div>
           <div class="top">
             <div class="badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 3.5h16M5 3.5v15M19 3.5v15M3 18.5h18"/><path d="M9.5 15c0-2 1-3 2.5-3s2.5 1 2.5 3M12 12V9.5"/><circle cx="12" cy="8" r="1.5"/></svg></div>
-            <div><div class="kind">Élèves · Programmation par blocs</div><h3>Théâtre d'ombre augmenté</h3></div>
+            <div><div class="kind">Programmation par blocs</div><h3>Théâtre d'ombre augmenté</h3></div>
           </div>
           <p class="desc">Les élèves programment leur théâtre d'ombre en blocs.</p>
           <div class="actions">
@@ -257,7 +288,7 @@ footer { margin-top: 12px; padding-top: 20px; border-top: 1px solid var(--line);
             <button class="copy" type="button" data-url="https://anlito.github.io/theatre-ombre/">Copier le lien</button>
           </div>
           <p class="url">anlito.github.io/theatre-ombre</p>
-          <div class="prof"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="15" r="4"/><path d="m11 12 9-9M17 6l3 3M14 9l2 2"/></svg><div><strong>Accès professeur</strong><p><a href="https://anlito.github.io/theatre-ombre/professeur.html" target="_blank" rel="noopener">Ouvrir l'outil professeur</a> : suivi et notation. Réglages (niveau, verrouillage, broches des LED) : lien « Mode professeur » en bas de l'outil, protégé par un code.</p></div></div>
+          <div class="prof"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="15" r="4"/><path d="m11 12 9-9M17 6l3 3M14 9l2 2"/></svg><div><strong>Pour le professeur</strong><p><a href="https://anlito.github.io/theatre-ombre/professeur.html" target="_blank" rel="noopener">Ouvrir l'outil professeur</a> : suivi et notation. Réglages (niveau, verrouillage, broches des LED) : lien « Mode professeur » en bas de l'outil, protégé par un code.</p></div></div>
           <div class="more">
             <h4>Pages utiles</h4>
             <ul>
@@ -271,9 +302,10 @@ footer { margin-top: 12px; padding-top: 20px; border-top: 1px solid var(--line);
         </article>
 
         <article class="tool is-prof">
+          <div class="who"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="1.5"/><path d="M7 20h10M12 16v4M7 9h6M7 12h4"/></svg>Pour le professeur</div>
           <div class="top">
             <div class="badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3.5" width="16" height="18" rx="2"/><path d="M9 3.5V2h6v1.5M8 9.5l1.5 1.5 3-3M8 15.5l1.5 1.5 3-3M15 10h2M15 16h2"/></svg></div>
-            <div><div class="kind">Évaluation</div><h3>Théâtre d'ombre · Professeur<span class="only-prof">Professeur</span></h3></div>
+            <div><div class="kind">Évaluation</div><h3>Théâtre d'ombre · Professeur</h3></div>
           </div>
           <p class="desc">Ouvre le dossier d'une classe : avancement du carnet de chaque équipe, validations ◆, IA et programme, personnages 3D, grille D1 à D7, bonus / malus, export Excel / Pronote. Chrome ou Edge.</p>
           <div class="actions">
@@ -301,9 +333,10 @@ footer { margin-top: 12px; padding-top: 20px; border-top: 1px solid var(--line);
       </div>
       <div class="tools">
         <article class="tool">
+          <div class="who"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c0 1.5 3 3 6 3s6-1.5 6-3v-5"/></svg>Pour les élèves</div>
           <div class="top">
             <div class="badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="8" width="14" height="10" rx="2.5"/><path d="M12 8V5M10 4.5h4M9.5 12.5v1M14.5 12.5v1M2.5 12v3M21.5 12v3M8 21h8"/></svg></div>
-            <div><div class="kind">Élèves · Jeu en équipes</div><h3>Robot Rush · Jouer</h3></div>
+            <div><div class="kind">Jeu en équipes</div><h3>Robot Rush · Jouer</h3></div>
           </div>
           <p class="desc">Les élèves entrent le code de leur équipe et un pseudo, puis répondent aux questions sur leur ordinateur.</p>
           <div class="actions">
@@ -311,7 +344,7 @@ footer { margin-top: 12px; padding-top: 20px; border-top: 1px solid var(--line);
             <button class="copy" type="button" data-url="https://robot-rush.onrender.com/jouer">Copier le lien</button>
           </div>
           <p class="url">robot-rush.onrender.com/jouer</p>
-          <div class="prof"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="15" r="4"/><path d="m11 12 9-9M17 6l3 3M14 9l2 2"/></svg><div><strong>Avant le cours</strong><p>Le jeu se met en veille après 15 minutes sans visite : ouvrir l'écran projecteur deux minutes avant le début du cours.</p></div></div>
+          <div class="prof"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="15" r="4"/><path d="m11 12 9-9M17 6l3 3M14 9l2 2"/></svg><div><strong>Pour le professeur : avant le cours</strong><p>Le jeu se met en veille après 15 minutes sans visite : ouvrir l'écran projecteur deux minutes avant le début du cours.</p></div></div>
           <div class="more">
             <h4>Pages utiles</h4>
             <ul>
@@ -322,9 +355,10 @@ footer { margin-top: 12px; padding-top: 20px; border-top: 1px solid var(--line);
         </article>
 
         <article class="tool is-prof">
+          <div class="who"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="1.5"/><path d="M7 20h10M12 16v4M7 9h6M7 12h4"/></svg>Pour le professeur</div>
           <div class="top">
             <div class="badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3.5" width="16" height="18" rx="2"/><path d="M9 3.5V2h6v1.5M8 9.5l1.5 1.5 3-3M8 15.5l1.5 1.5 3-3M15 10h2M15 16h2"/></svg></div>
-            <div><div class="kind">Animation de la partie</div><h3>Robot Rush · Professeur<span class="only-prof">Professeur</span></h3></div>
+            <div><div class="kind">Animation de la partie</div><h3>Robot Rush · Professeur</h3></div>
           </div>
           <p class="desc">Parcours, questions, équipes et codes, élèves ; Démarrer, Pause, Arrêter. Protégé par mot de passe.</p>
           <div class="actions">
@@ -355,9 +389,10 @@ footer { margin-top: 12px; padding-top: 20px; border-top: 1px solid var(--line);
       </div>
       <div class="tools">
         <article class="tool is-prof">
+          <div class="who"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="1.5"/><path d="M7 20h10M12 16v4M7 9h6M7 12h4"/></svg>Pour le professeur</div>
           <div class="top">
             <div class="badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="3"/><circle cx="17" cy="9" r="2.4"/><path d="M2.5 19c.6-3.2 2.8-5 5.5-5s4.9 1.8 5.5 5M14 14.6c.9-.4 1.9-.6 3-.6 2.3 0 4 1.5 4.5 4.5"/></svg></div>
-            <div><div class="kind">Suivi des élèves</div><h3>Carnet de classe<span class="only-prof">Professeur</span></h3></div>
+            <div><div class="kind">Suivi des élèves</div><h3>Carnet de classe</h3></div>
           </div>
           <p class="desc">Trombinoscope, appel, observations, groupes, notes par compétences, plans de salle, emploi du temps Pronote.</p>
           <div class="actions">
@@ -377,10 +412,30 @@ footer { margin-top: 12px; padding-top: 20px; border-top: 1px solid var(--line);
     </section>
   </main>
 
-  <footer>Les fiches en pointillés sont réservées au professeur : ne pas donner leur lien aux élèves. Les autres liens « Ouvrir l'outil » sont publics. Les documents (briefs, cahiers des charges) ne s'ouvrent que pour moi.</footer>
+  <footer>Les fiches « Pour les élèves » sont publiques : on peut donner leur lien en classe. Les fiches « Pour le professeur » ne sont pas à donner aux élèves. Les documents (briefs, cahiers des charges) ne s'ouvrent que pour moi.</footer>
 </div>
 
 <script>
+(function () {
+  var btns = document.querySelectorAll(".filter button");
+  function apply(f) {
+    document.body.dataset.f = f;
+    btns.forEach(function (b) { b.setAttribute("aria-pressed", String(b.dataset.f === f)); });
+    document.querySelectorAll(".project").forEach(function (sec) {
+      var any = Array.prototype.some.call(sec.querySelectorAll(".tool"), function (t) {
+        return f === "tout" || (f === "prof") === t.classList.contains("is-prof");
+      });
+      sec.classList.toggle("empty", !any);
+      var pill = document.querySelector('nav.jump a[href="#' + sec.id + '"]');
+      if (pill) pill.classList.toggle("empty", !any);
+    });
+    try { localStorage.setItem("filtre-outils", f); } catch (e) {}
+  }
+  btns.forEach(function (b) { b.addEventListener("click", function () { apply(b.dataset.f); }); });
+  var saved = "tout";
+  try { saved = localStorage.getItem("filtre-outils") || "tout"; } catch (e) {}
+  apply(saved);
+})();
 document.querySelectorAll(".copy").forEach(function (btn) {
   btn.addEventListener("click", function () {
     var url = btn.dataset.url, label = btn.textContent;

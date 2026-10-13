@@ -13,7 +13,7 @@ Dans `index.html` :
 - nouveau projet : copier une `<section class="project">` entière, lui donner une couleur (`--c-…` dans `:root` et les deux blocs sombres) et ajouter son lien dans `<nav class="jump">`.
 
 Puis changer le nom, la description, le lien « Ouvrir l'outil », le lien de « Copier le lien », l'adresse affichée et les documents.
-Outil réservé au professeur : classe `is-prof` sur l'article et badge `only-prof`. Accès professeur dans un outil élève : encart `<div class="prof">` (sans jamais écrire le code : la page est publique).
+Chaque fiche commence par un bandeau `<div class="who">` (« Pour les élèves » ou « Pour le professeur ») : copier celui d'une fiche du même type. Outil réservé au professeur : classe `is-prof` sur l'article (fond grisé, bandeau sombre, masqué par le filtre « Élèves »). Accès professeur dans un outil élève : encart `<div class="prof">` (sans jamais écrire le code : la page est publique).
 Mettre à jour les compteurs (« N projets · N outils » en haut, « N outils » du projet).
 
 ## Outils actuels
