@@ -16,6 +16,18 @@ Puis changer le nom, la description, le lien « Ouvrir l'outil », le lien de «
 Chaque fiche commence par un bandeau `<div class="who">` (« Pour les élèves » ou « Pour le professeur ») : copier celui d'une fiche du même type. Outil réservé au professeur : classe `is-prof` sur l'article (fond grisé, bandeau sombre, masqué par le filtre « Élèves »). Accès professeur dans un outil élève : encart `<div class="prof">` (sans jamais écrire le code : la page est publique).
 Mettre à jour les compteurs (« N projets · N outils » en haut, « N outils » du projet).
 
+## Fichiers à télécharger
+
+Le dossier `fichiers/` contient des copies de fichiers d'autres dépôts, proposés en téléchargement sur la page
+(un lien `download` ne marche que pour un fichier du même site) :
+
+| Fichier | Copie de |
+|---|---|
+| `fichiers/robot-rush/MODELE-QUESTIONS-IA.md` | `Anlito/robot-rush` : `outils-salle/MODELE-QUESTIONS-IA.md` |
+| `fichiers/robot-rush/exemple-questions-robot-rush.json` | `Anlito/robot-rush` : `outils-salle/exemple-questions-robot-rush.json` |
+
+Quand l'original change, recopier le fichier ici.
+
 ## Outils actuels
 
 | Projet | Outil | Adresse |

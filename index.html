@@ -103,6 +103,8 @@ h3 { font-family: var(--display); font-weight: 700; font-size: 1.2rem; line-heig
 .more ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 4px; }
 .more a { color: var(--ink); text-decoration: none; font-size: .92rem; display: inline-flex; gap: 6px; align-items: baseline; }
 .more a::before { content: "→"; color: var(--c); }
+.more .h4-fichiers { margin-top: 12px; }
+.aide-fichiers { margin: 0 0 6px; font-size: .85rem; color: var(--muted); }
 .more a:hover { text-decoration: underline; text-decoration-color: var(--c); text-underline-offset: 3px; }
 a:focus-visible, button:focus-visible { outline: 3px solid var(--c, var(--accent)); outline-offset: 2px; }
 footer { margin-top: 12px; padding-top: 20px; border-top: 1px solid var(--line); color: var(--muted); font-size: .85rem; }
@@ -375,6 +377,12 @@ footer { margin-top: 12px; padding-top: 20px; border-top: 1px solid var(--line);
               <li><a href="https://github.com/Anlito/robot-rush/blob/main/MODE-LOCAL.md" target="_blank" rel="noopener">Plan B : le jeu sur le PC, sans internet</a></li>
               <li><a href="https://github.com/Anlito/robot-rush/blob/main/outils-pi/RASPBERRY-PI.md" target="_blank" rel="noopener">Borne Raspberry Pi (réseau du collège)</a></li>
               <li><a href="https://github.com/Anlito/robot-rush/blob/main/outils-salle/MODELE-QUESTIONS-IA.md" target="_blank" rel="noopener">Faire créer des questions par une IA</a></li>
+            </ul>
+            <h4 class="h4-fichiers">Pour faire créer des questions par une IA</h4>
+            <p class="aide-fichiers">Télécharger les deux fichiers, les joindre à l'IA, puis importer son fichier JSON (bouton « Importer JSON »).</p>
+            <ul>
+              <li><a href="fichiers/robot-rush/MODELE-QUESTIONS-IA.md" download="MODELE-QUESTIONS-IA.md">Télécharger la consigne pour l'IA (.md)</a></li>
+              <li><a href="fichiers/robot-rush/exemple-questions-robot-rush.json" download="exemple-questions-robot-rush.json">Télécharger le fichier exemple : toutes les questions possibles (.json)</a></li>
             </ul>
           </div>
         </article>
