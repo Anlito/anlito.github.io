@@ -41,4 +41,6 @@ Quand l'original change, recopier le fichier ici.
 | Théâtre d'ombre | Théâtre d'ombre · Professeur | https://anlito.github.io/theatre-ombre/professeur.html |
 | Robot Rush | Robot Rush · Jouer (élèves, hébergé sur Render) | https://robot-rush.onrender.com/jouer |
 | Robot Rush | Robot Rush · Professeur | https://robot-rush.onrender.com/admin |
+| Labo Blocs | Parcours découverte (mBot, micro:bit) | https://anlito.github.io/labo-blocs/site/index.html?parcours=decouverte-mbot |
+| Labo Blocs | Labo Blocs · Professeur (accueil, éditeur, suivi) | https://anlito.github.io/labo-blocs/site/accueil.html |
 | Toute l'année | Carnet de classe | https://anlito.github.io/gestion-de-classe-et-suivi-projet/ |

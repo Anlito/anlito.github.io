@@ -22,6 +22,7 @@
   --c-ombre: #6d4bc4;
   --c-classe: #1f7fb8;
   --c-rush: #cf3f35;
+  --c-labo: #b8327c;
   --prof: #262c3a;
   --prof-fg: #ffffff;
   --prof-surface: #e9ecf2;
@@ -31,14 +32,14 @@
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
     --bg: #11151d; --surface: #1a202b; --ink: #e8ecf3; --muted: #9aa5b6; --line: #2b3342; --accent: #7c9cff;
-    --c-store: #4fc095; --c-cereales: #f0a83a; --c-ombre: #a68bf0; --c-classe: #4fb0e8; --c-rush: #f2766c;
+    --c-store: #4fc095; --c-cereales: #f0a83a; --c-ombre: #a68bf0; --c-classe: #4fb0e8; --c-rush: #f2766c; --c-labo: #ec7fbd;
     --prof: #dfe4ee; --prof-fg: #141925; --prof-surface: #222937;
     color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
   --bg: #11151d; --surface: #1a202b; --ink: #e8ecf3; --muted: #9aa5b6; --line: #2b3342; --accent: #7c9cff;
-  --c-store: #4fc095; --c-cereales: #f0a83a; --c-ombre: #a68bf0; --c-classe: #4fb0e8; --c-rush: #f2766c;
+  --c-store: #4fc095; --c-cereales: #f0a83a; --c-ombre: #a68bf0; --c-classe: #4fb0e8; --c-rush: #f2766c; --c-labo: #ec7fbd;
     --prof: #dfe4ee; --prof-fg: #141925; --prof-surface: #222937;
   color-scheme: dark;
 }
@@ -103,8 +104,6 @@ h3 { font-family: var(--display); font-weight: 700; font-size: 1.2rem; line-heig
 .more ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 4px; }
 .more a { color: var(--ink); text-decoration: none; font-size: .92rem; display: inline-flex; gap: 6px; align-items: baseline; }
 .more a::before { content: "→"; color: var(--c); }
-.more .h4-fichiers { margin-top: 12px; }
-.aide-fichiers { margin: 0 0 6px; font-size: .85rem; color: var(--muted); }
 .more a:hover { text-decoration: underline; text-decoration-color: var(--c); text-underline-offset: 3px; }
 a:focus-visible, button:focus-visible { outline: 3px solid var(--c, var(--accent)); outline-offset: 2px; }
 footer { margin-top: 12px; padding-top: 20px; border-top: 1px solid var(--line); color: var(--muted); font-size: .85rem; }
@@ -118,7 +117,7 @@ footer { margin-top: 12px; padding-top: 20px; border-top: 1px solid var(--line);
       <h1>Mes outils de classe</h1>
       <p class="sub">Tous les outils créés pour mes élèves, rangés par projet. Un clic pour ouvrir, un autre pour copier le lien à partager.</p>
     </div>
-    <span class="count">5 projets · 10 outils</span>
+    <span class="count">6 projets · 12 outils</span>
   </header>
 
   <div class="toolbar">
@@ -132,6 +131,7 @@ footer { margin-top: 12px; padding-top: 20px; border-top: 1px solid var(--line);
     <a href="#cereales" style="--c: var(--c-cereales)">Distributeur de céréales</a>
     <a href="#theatre" style="--c: var(--c-ombre)">Théâtre d'ombre</a>
     <a href="#robot-rush" style="--c: var(--c-rush)">Robot Rush</a>
+    <a href="#labo-blocs" style="--c: var(--c-labo)">Labo Blocs</a>
     <a href="#classe" style="--c: var(--c-classe)">Gestion de classe</a>
   </nav>
   </div>
@@ -362,7 +362,7 @@ footer { margin-top: 12px; padding-top: 20px; border-top: 1px solid var(--line);
             <div class="badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3.5" width="16" height="18" rx="2"/><path d="M9 3.5V2h6v1.5M8 9.5l1.5 1.5 3-3M8 15.5l1.5 1.5 3-3M15 10h2M15 16h2"/></svg></div>
             <div><div class="kind">Animation de la partie</div><h3>Robot Rush · Professeur</h3></div>
           </div>
-          <p class="desc">Questions (6 types, questions bonus) et parcours, équipes et codes ; Démarrer, Pause, Arrêter ; historique des parties et bilan par question. Protégé par mot de passe.</p>
+          <p class="desc">Parcours, questions, équipes et codes, élèves ; Démarrer, Pause, Arrêter. Protégé par mot de passe.</p>
           <div class="actions">
             <a class="open" href="https://robot-rush.onrender.com/admin" target="_blank" rel="noopener">Ouvrir l'outil</a>
             <button class="copy" type="button" data-url="https://robot-rush.onrender.com/admin">Copier le lien</button>
@@ -375,14 +375,61 @@ footer { margin-top: 12px; padding-top: 20px; border-top: 1px solid var(--line);
               <li><a href="https://robot-rush.onrender.com/test" target="_blank" rel="noopener">Diagnostic du réseau (depuis un poste élève)</a></li>
               <li><a href="https://github.com/Anlito/robot-rush/blob/main/DEPLOIEMENT.md" target="_blank" rel="noopener">Mise en ligne et sauvegarde des questions</a></li>
               <li><a href="https://github.com/Anlito/robot-rush/blob/main/MODE-LOCAL.md" target="_blank" rel="noopener">Plan B : le jeu sur le PC, sans internet</a></li>
-              <li><a href="https://github.com/Anlito/robot-rush/blob/main/outils-pi/RASPBERRY-PI.md" target="_blank" rel="noopener">Borne Raspberry Pi (réseau du collège)</a></li>
-              <li><a href="https://github.com/Anlito/robot-rush/blob/main/outils-salle/MODELE-QUESTIONS-IA.md" target="_blank" rel="noopener">Faire créer des questions par une IA</a></li>
             </ul>
-            <h4 class="h4-fichiers">Pour faire créer des questions par une IA</h4>
-            <p class="aide-fichiers">Télécharger les deux fichiers, les joindre à l'IA, puis importer son fichier JSON (bouton « Importer JSON »).</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== Projet Labo Blocs ===== -->
+    <section class="project" id="labo-blocs" style="--c: var(--c-labo)">
+      <div class="p-head">
+        <div class="p-level">Outil commun · 5e à 3e</div>
+        <h2>Labo Blocs</h2>
+        <p>Programmation par blocs pour tous les projets, à la place de Vittascience et mBlock : exercices corrigés automatiquement, simulateur, envoi du programme dans la carte (Arduino Uno, mBot, micro:bit).</p>
+        <span class="n">2 outils</span>
+      </div>
+      <div class="tools">
+        <article class="tool">
+          <div class="who"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c0 1.5 3 3 6 3s6-1.5 6-3v-5"/></svg>Pour les élèves</div>
+          <div class="top">
+            <div class="badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5h7l1 1.5h2L14 5h7v5H14l-1 1.5h-2L10 10H3z"/><path d="M3 14h7l1 1.5h2L14 14h4v5h-4l-1 1.5h-2L10 19H3z"/></svg></div>
+            <div><div class="kind">Programmation par blocs</div><h3>Labo Blocs · Parcours découverte</h3></div>
+          </div>
+          <p class="desc">Les élèves découvrent le mBot ou la carte micro:bit : exercices, indices, simulateur, puis le programme dans la vraie carte. Chrome ou Edge.</p>
+          <div class="actions">
+            <a class="open" href="https://anlito.github.io/labo-blocs/site/index.html?parcours=decouverte-mbot" target="_blank" rel="noopener">Découverte mBot</a>
+            <button class="copy" type="button" data-url="https://anlito.github.io/labo-blocs/site/index.html?parcours=decouverte-mbot">Copier le lien</button>
+          </div>
+          <p class="url">anlito.github.io/labo-blocs/site/index.html?parcours=decouverte-mbot</p>
+          <div class="more">
+            <h4>Autres parcours</h4>
             <ul>
-              <li><a href="fichiers/robot-rush/MODELE-QUESTIONS-IA.md" download="MODELE-QUESTIONS-IA.md">Télécharger la consigne pour l'IA (.md)</a></li>
-              <li><a href="fichiers/robot-rush/exemple-questions-robot-rush.json" download="exemple-questions-robot-rush.json">Télécharger le fichier exemple : toutes les questions possibles (.json)</a></li>
+              <li><a href="https://anlito.github.io/labo-blocs/site/index.html?parcours=decouverte-microbit" target="_blank" rel="noopener">Découverte micro:bit</a></li>
+              <li><a href="https://github.com/Anlito/labo-blocs" target="_blank" rel="noopener">Code source (GitHub)</a></li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="tool is-prof">
+          <div class="who"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="1.5"/><path d="M7 20h10M12 16v4M7 9h6M7 12h4"/></svg>Pour le professeur</div>
+          <div class="top">
+            <div class="badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3.5" width="16" height="18" rx="2"/><path d="M9 3.5V2h6v1.5M8 9.5l1.5 1.5 3-3M8 15.5l1.5 1.5 3-3M15 10h2M15 16h2"/></svg></div>
+            <div><div class="kind">Parcours et suivi</div><h3>Labo Blocs · Professeur</h3></div>
+          </div>
+          <p class="desc">Accueil du professeur, protégé par le code professeur : créer et modifier les parcours sans toucher au code, suivre une classe (niveaux par compétence, note, exports pour le Carnet de classe), essayer un parcours en mode enseignant.</p>
+          <div class="actions">
+            <a class="open" href="https://anlito.github.io/labo-blocs/site/accueil.html" target="_blank" rel="noopener">Ouvrir l'outil</a>
+            <button class="copy" type="button" data-url="https://anlito.github.io/labo-blocs/site/accueil.html">Copier le lien</button>
+          </div>
+          <p class="url">anlito.github.io/labo-blocs/site/accueil.html</p>
+          <div class="more">
+            <h4>Pages utiles</h4>
+            <ul>
+              <li><a href="https://anlito.github.io/labo-blocs/site/editeur.html" target="_blank" rel="noopener">Éditeur de parcours</a></li>
+              <li><a href="https://anlito.github.io/labo-blocs/site/prof.html" target="_blank" rel="noopener">Suivi de classe</a></li>
+              <li><a href="https://github.com/Anlito/labo-blocs/blob/main/docs/BRIEF-LABO-BLOCS-POUR-UN-PROJET.md" target="_blank" rel="noopener">Relier un nouveau projet à Labo Blocs</a></li>
+              <li><a href="https://claude.ai/artifact/NUiEuKMzsMxzubE188MAoH" target="_blank" rel="noopener">Maquette</a></li>
             </ul>
           </div>
         </article>
