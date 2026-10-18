@@ -25,6 +25,8 @@ Le dossier `fichiers/` contient des copies de fichiers d'autres dépôts, propos
 |---|---|
 | `fichiers/robot-rush/MODELE-QUESTIONS-IA.md` | `Anlito/robot-rush` : `outils-salle/MODELE-QUESTIONS-IA.md` |
 | `fichiers/robot-rush/exemple-questions-robot-rush.json` | `Anlito/robot-rush` : `outils-salle/exemple-questions-robot-rush.json` |
+| `fichiers/sauvegarde-eleves/SauvegardeEleves.zip` | Outil Windows (pas de dépôt à part) : le dossier `SauvegardeEleves` zippé |
+| `fichiers/sauvegarde-eleves/mode-d-emploi.txt` | `Mode d'emploi.txt` du zip ci-dessus |
 
 Quand l'original change, recopier le fichier ici.
 
@@ -44,3 +46,4 @@ Quand l'original change, recopier le fichier ici.
 | Labo Blocs | Labo Blocs · Parcours (choix du parcours) | https://anlito.github.io/labo-blocs/site/eleves.html |
 | Labo Blocs | Labo Blocs · Professeur (accueil, éditeur, suivi) | https://anlito.github.io/labo-blocs/site/accueil.html |
 | Toute l'année | Carnet de classe | https://anlito.github.io/gestion-de-classe-et-suivi-projet/ |
+| Toute l'année | Sauvegarde du travail des élèves (Windows, à télécharger) | https://anlito.github.io/fichiers/sauvegarde-eleves/SauvegardeEleves.zip |

@@ -1,0 +1,40 @@
+﻿SAUVEGARDE DU TRAVAIL DES ÉLÈVES — mode d'emploi
+================================================
+
+Installation (une seule fois)
+-----------------------------
+Copiez TOUT ce dossier à la racine de votre clé USB (le fichier .bat, le dossier "outil" et ce mode d'emploi).
+Les copies seront rangées sur la clé, dans le dossier "Sauvegarde_Eleves".
+
+Au lycée, sur un PC qui voit le serveur
+---------------------------------------
+1. Branchez la clé et double-cliquez sur "Sauvegarde-Eleves.bat".
+2. La première fois : "Ajouter un dossier…" pour chaque dossier du serveur qui vous intéresse
+   (ou collez son chemin, ex. \\serveur\classes\2nde3\Travaux, puis "Ajouter ce chemin").
+   La liste est mémorisée sur la clé.
+3. Cochez les dossiers voulus et cliquez sur "Lancer la sauvegarde".
+   La première fois tout est copié (ça peut être long). Les fois suivantes, seuls les fichiers
+   nouveaux ou modifiés depuis la dernière fois sont recopiés : c'est rapide.
+
+Plusieurs établissements : une seule clé suffit. Ajoutez les dossiers de chaque collège sur place.
+Les copies sont rangées sous le nom du serveur (ex. Sauvegarde_Eleves\srv-college\classes\3 E\...),
+donc les classes de deux collèges ne se mélangent pas. Dans un collège, les dossiers de l'autre
+sont simplement "non accessibles ici" et ignorés.
+
+Plus pressé : "Synchro-rapide.bat" sauvegarde directement les dossiers déjà cochés, sans fenêtre.
+
+Pour le suivi, chez vous
+------------------------
+- Sauvegarde_Eleves\_Derniere_sauvegarde.txt : liste des fichiers nouveaux / modifiés lors de la
+  dernière sauvegarde (bouton "Voir les nouveautés de la dernière fois").
+- Sauvegarde_Eleves\_Journaux\ : un fichier par sauvegarde, pour retrouver ce qui a changé et quand.
+
+Bon à savoir
+------------
+- Rien n'est jamais effacé sur la clé, même si un élève supprime un fichier sur le serveur.
+- Un fichier de la clé n'est remplacé que si la version du serveur est plus récente.
+  Pour annoter une copie, faites-le plutôt sur une copie à part (ex. un dossier "Corrections"),
+  sinon la prochaine modification de l'élève remplacera vos annotations.
+- Un fichier ouvert par un élève au moment de la copie peut être signalé "problème" :
+  il sera repris à la sauvegarde suivante.
+- La clé contient des travaux d'élèves : évitez de la perdre (ou chiffrez-la avec BitLocker To Go).
