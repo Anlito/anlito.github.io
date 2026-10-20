@@ -39,6 +39,8 @@ Quand l'original change, recopier le fichier ici.
 | Concept Store | Concept Store · Professeur | https://anlito.github.io/concept-store-prof/ |
 | Distributeur de céréales | Atelier de blocs | https://anlito.github.io/atelier-cereales/ |
 | Distributeur de céréales | Distributeur de céréales · Professeur | https://anlito.github.io/atelier-cereales/prof.html |
+| Labyrinthe robotisé | Labyrinthe robotisé · Élèves | https://anlito.github.io/labyrinthe-robotise/ |
+| Labyrinthe robotisé | Labyrinthe robotisé · Professeur | https://anlito.github.io/labyrinthe-robotise/prof.html |
 | Théâtre d'ombre | Théâtre d'ombre augmenté | https://anlito.github.io/theatre-ombre/ |
 | Théâtre d'ombre | Théâtre d'ombre · Professeur | https://anlito.github.io/theatre-ombre/professeur.html |
 | Robot Rush | Robot Rush · Jouer (élèves, hébergé sur Render) | https://robot-rush.onrender.com/jouer |
