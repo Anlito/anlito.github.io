@@ -1,5 +1,27 @@
 # Mes outils de classe
 
+<!-- suivi-maintenance:debut -->
+## État du projet et améliorations documentées — 21 octobre 2026
+
+- Une rubrique Labyrinthe robotisé · 5e et 4e a été ajoutée au portail, avec deux fiches distinctes : accès élèves et accès professeur.
+- Le menu, les filtres et les compteurs ont été adaptés. L’affichage sur ordinateur et téléphone ainsi que les liens ont été vérifiés lors de cette amélioration.
+- Les fiches du portail sont dans index.html. Les fichiers proposés au téléchargement depuis fichiers/ restent à synchroniser avec leurs projets d’origine lorsque ces fichiers changent.
+
+### Référence locale et maintenance
+
+Dossier de travail de référence : **Documents/anlito.github.io**. Dépôt : [Anlito/anlito.github.io](https://github.com/Anlito/anlito.github.io). La branche principale est **main**. Les copies temporaires d’un chat ou les worktrees servent au travail intermédiaire ; elles ne remplacent pas ce dossier.
+
+À chaque intervention :
+
+1. Vérifier les modifications locales et la version publiée avant de commencer ; sauvegarder le travail non enregistré.
+2. Décrire dans ce README les améliorations, les vérifications, les limites et les opérations restantes.
+3. Publier les changements autorisés, puis synchroniser le dossier local de référence avec le même commit.
+4. Contrôler le commit local, le commit distant et les fichiers restants avant d’annoncer que le projet est à jour. Signaler explicitement tout décalage ou travail conservé hors publication.
+
+Cette règle permet de reprendre le projet dans un autre outil local sans perdre les dernières améliorations. Une publication du site ne met pas automatiquement à jour les dossiers du PC.
+
+<!-- suivi-maintenance:fin -->
+
 Page d'accueil qui regroupe tous mes outils pédagogiques, rangés par projet : https://anlito.github.io/
 
 La plupart des outils sont sur GitHub Pages (`anlito.github.io/…`). Robot Rush a besoin d'un serveur : il est hébergé sur Render (`robot-rush.onrender.com`).
