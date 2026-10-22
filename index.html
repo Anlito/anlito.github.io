@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="Les outils pédagogiques de Thomas : distributeur de céréales, Concept Store 3D, site vitrine, théâtre d'ombre, labyrinthe robotisé, gestion de classe.">
+<meta name="description" content="Les outils pédagogiques de Thomas : distributeur de céréales, Concept Store 3D, site vitrine, théâtre d'ombre, labyrinthe robotisé, Simon Rétro Game, gestion de classe.">
 <style>:root{color-scheme:light}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
 <title>Mes outils de classe</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,6 +24,7 @@
   --c-rush: #cf3f35;
   --c-labo: #b8327c;
   --c-labyrinthe: #0055cc;
+  --c-simon: #0b7a83;
   --prof: #262c3a;
   --prof-fg: #ffffff;
   --prof-surface: #e9ecf2;
@@ -33,14 +34,14 @@
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
     --bg: #11151d; --surface: #1a202b; --ink: #e8ecf3; --muted: #9aa5b6; --line: #2b3342; --accent: #7c9cff;
-    --c-store: #4fc095; --c-cereales: #f0a83a; --c-ombre: #a68bf0; --c-classe: #4fb0e8; --c-rush: #f2766c; --c-labo: #ec7fbd; --c-labyrinthe: #76bbff;
+    --c-store: #4fc095; --c-cereales: #f0a83a; --c-ombre: #a68bf0; --c-classe: #4fb0e8; --c-rush: #f2766c; --c-labo: #ec7fbd; --c-labyrinthe: #76bbff; --c-simon: #4fd3d9;
     --prof: #dfe4ee; --prof-fg: #141925; --prof-surface: #222937;
     color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
   --bg: #11151d; --surface: #1a202b; --ink: #e8ecf3; --muted: #9aa5b6; --line: #2b3342; --accent: #7c9cff;
-  --c-store: #4fc095; --c-cereales: #f0a83a; --c-ombre: #a68bf0; --c-classe: #4fb0e8; --c-rush: #f2766c; --c-labo: #ec7fbd; --c-labyrinthe: #76bbff;
+  --c-store: #4fc095; --c-cereales: #f0a83a; --c-ombre: #a68bf0; --c-classe: #4fb0e8; --c-rush: #f2766c; --c-labo: #ec7fbd; --c-labyrinthe: #76bbff; --c-simon: #4fd3d9;
     --prof: #dfe4ee; --prof-fg: #141925; --prof-surface: #222937;
   color-scheme: dark;
 }
@@ -118,7 +119,7 @@ footer { margin-top: 12px; padding-top: 20px; border-top: 1px solid var(--line);
       <h1>Mes outils de classe</h1>
       <p class="sub">Tous les outils créés pour mes élèves, rangés par projet. Un clic pour ouvrir, un autre pour copier le lien à partager.</p>
     </div>
-    <span class="count">7 projets · 15 outils</span>
+    <span class="count">8 projets · 16 outils</span>
   </header>
 
   <div class="toolbar">
@@ -131,6 +132,7 @@ footer { margin-top: 12px; padding-top: 20px; border-top: 1px solid var(--line);
     <a href="#concept-store" style="--c: var(--c-store)">Concept Store</a>
     <a href="#cereales" style="--c: var(--c-cereales)">Distributeur de céréales</a>
     <a href="#labyrinthe-robotise" style="--c:var(--c-labyrinthe)">Labyrinthe robotisé</a>
+    <a href="#simon-retro-game" style="--c: var(--c-simon)">Simon Rétro Game</a>
     <a href="#theatre" style="--c: var(--c-ombre)">Théâtre d'ombre</a>
     <a href="#robot-rush" style="--c: var(--c-rush)">Robot Rush</a>
     <a href="#labo-blocs" style="--c: var(--c-labo)">Labo Blocs</a>
@@ -316,6 +318,40 @@ footer { margin-top: 12px; padding-top: 20px; border-top: 1px solid var(--line);
             <h4>Documents</h4>
             <ul>
               <li><a href="https://github.com/Anlito/labyrinthe-robotise/blob/main/LISEZ-MOI.md" target="_blank" rel="noopener">Mode d'emploi (GitHub)</a></li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== Projet Simon Rétro Game ===== -->
+    <section class="project" id="simon-retro-game" style="--c: var(--c-simon)">
+      <div class="p-head">
+        <div class="p-level">Projet · 5e et 4e</div>
+        <h2>Simon Rétro Game</h2>
+        <p>Concevoir un jeu Simon de poche en bureau d'études : boîtier 3D, affiche, câblage et programme, jusqu'au Grand Tournoi.</p>
+        <span class="n">1 outil</span>
+      </div>
+      <div class="tools">
+        <article class="tool">
+          <div class="who"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c0 1.5 3 3 6 3s6-1.5 6-3v-5"/></svg>Pour les élèves</div>
+          <div class="top">
+            <div class="badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 3v6M12 15v6M3 12h6M15 12h6"/><circle cx="12" cy="12" r="3"/></svg></div>
+            <div><div class="kind">Carnet et programmation</div><h3>Simon Rétro Game</h3></div>
+          </div>
+          <p class="desc">Carnet de projet de l'équipe (analyse, boîtier 3D, affiche à déposer en PDF, câblage, algorithme), programmation du Simon avec Labo Blocs et son simulateur, et tutoriel de câblage pas à pas.</p>
+          <div class="actions">
+            <a class="open" href="https://anlito.github.io/simon-retro-game/" target="_blank" rel="noopener">Ouvrir l'outil</a>
+            <button class="copy" type="button" data-url="https://anlito.github.io/simon-retro-game/">Copier le lien</button>
+          </div>
+          <p class="url">anlito.github.io/simon-retro-game</p>
+          <div class="prof"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="15" r="4"/><path d="m11 12 9-9M17 6l3 3M14 9l2 2"/></svg><div><strong>Pour le professeur</strong><p><a href="https://anlito.github.io/simon-retro-game/prof.html" target="_blank" rel="noopener">Ouvrir l'outil professeur</a> : suivi des équipes, carnet, affiches PDF, évaluations par niveau de maîtrise, photos des croquis et de la console assemblée.</p></div></div>
+          <div class="more">
+            <h4>Documents</h4>
+            <ul>
+              <li><a href="https://anlito.github.io/simon-retro-game/tuto-cablage.html" target="_blank" rel="noopener">Tutoriel de câblage</a></li>
+              <li><a href="https://github.com/Anlito/simon-retro-game/blob/main/LISEZ-MOI.md" target="_blank" rel="noopener">Mode d'emploi du professeur (GitHub)</a></li>
+              <li><a href="https://github.com/Anlito/simon-retro-game" target="_blank" rel="noopener">Code source (GitHub)</a></li>
             </ul>
           </div>
         </article>
