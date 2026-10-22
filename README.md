@@ -67,7 +67,7 @@ Quand l'original change, recopier le fichier ici.
 | Simon Rétro Game | Simon Rétro Game · Élèves | https://anlito.github.io/simon-retro-game/ |
 | Simon Rétro Game | Simon Rétro Game · Professeur | https://anlito.github.io/simon-retro-game/prof.html |
 | Théâtre d'ombre | Théâtre d'ombre augmenté | https://anlito.github.io/theatre-ombre/ |
-| Théâtre d'ombre | Théâtre d'ombre · Professeur | https://anlito.github.io/theatre-ombre/professeur.html |
+| Théâtre d'ombre | Théâtre d'ombre · Professeur | https://anlito.github.io/theatre-ombre/prof.html |
 | Robot Rush | Robot Rush · Jouer (élèves, hébergé sur Render) | https://robot-rush.onrender.com/jouer |
 | Robot Rush | Robot Rush · Professeur | https://robot-rush.onrender.com/admin |
 | Labo Blocs | Labo Blocs · Parcours (choix du parcours) | https://anlito.github.io/labo-blocs/site/eleves.html |
