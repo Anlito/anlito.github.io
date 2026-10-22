@@ -3,7 +3,7 @@
 <!-- suivi-maintenance:debut -->
 ## État du projet et améliorations documentées — 22 octobre 2026
 
-- Une rubrique Simon Rétro Game · 5e et 4e a été ajoutée (couleur `--c-simon`) : une fiche élèves avec un encart professeur vers `prof.html`, le tutoriel de câblage et le mode d’emploi en documents. Menu et compteurs mis à jour (8 projets · 16 outils).
+- Une rubrique Simon Rétro Game · 5e et 4e a été ajoutée (couleur `--c-simon`) : deux fiches distinctes, accès élèves (avec le tutoriel de câblage) et accès professeur (`prof.html`, avec le mode d’emploi). Menu et compteurs mis à jour (8 projets · 17 outils).
 - Une rubrique Labyrinthe robotisé · 5e et 4e a été ajoutée au portail, avec deux fiches distinctes : accès élèves et accès professeur.
 - Le menu, les filtres et les compteurs ont été adaptés. L’affichage sur ordinateur et téléphone ainsi que les liens ont été vérifiés lors de cette amélioration.
 - Les fiches du portail sont dans index.html. Les fichiers proposés au téléchargement depuis fichiers/ restent à synchroniser avec leurs projets d’origine lorsque ces fichiers changent.
@@ -64,8 +64,8 @@ Quand l'original change, recopier le fichier ici.
 | Distributeur de céréales | Distributeur de céréales · Professeur | https://anlito.github.io/atelier-cereales/prof.html |
 | Labyrinthe robotisé | Labyrinthe robotisé · Élèves | https://anlito.github.io/labyrinthe-robotise/ |
 | Labyrinthe robotisé | Labyrinthe robotisé · Professeur | https://anlito.github.io/labyrinthe-robotise/prof.html |
-| Simon Rétro Game | Simon Rétro Game · Élèves (encart professeur vers prof.html) | https://anlito.github.io/simon-retro-game/ |
-| Simon Rétro Game | Simon Rétro Game · Professeur (lien depuis l'encart) | https://anlito.github.io/simon-retro-game/prof.html |
+| Simon Rétro Game | Simon Rétro Game · Élèves | https://anlito.github.io/simon-retro-game/ |
+| Simon Rétro Game | Simon Rétro Game · Professeur | https://anlito.github.io/simon-retro-game/prof.html |
 | Théâtre d'ombre | Théâtre d'ombre augmenté | https://anlito.github.io/theatre-ombre/ |
 | Théâtre d'ombre | Théâtre d'ombre · Professeur | https://anlito.github.io/theatre-ombre/professeur.html |
 | Robot Rush | Robot Rush · Jouer (élèves, hébergé sur Render) | https://robot-rush.onrender.com/jouer |
