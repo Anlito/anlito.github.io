@@ -26,6 +26,7 @@
   --c-labyrinthe: #0055cc;
   --c-simon: #0b7a83;
   --c-escape: #8a6a12;
+  --c-mbot: #4338ca;
   --prof: #262c3a;
   --prof-fg: #ffffff;
   --prof-surface: #e9ecf2;
@@ -35,14 +36,14 @@
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
     --bg: #11151d; --surface: #1a202b; --ink: #e8ecf3; --muted: #9aa5b6; --line: #2b3342; --accent: #7c9cff;
-    --c-store: #4fc095; --c-cereales: #f0a83a; --c-ombre: #a68bf0; --c-classe: #4fb0e8; --c-rush: #f2766c; --c-labo: #ec7fbd; --c-labyrinthe: #76bbff; --c-simon: #4fd3d9; --c-escape: #e2c15a;
+    --c-store: #4fc095; --c-cereales: #f0a83a; --c-ombre: #a68bf0; --c-classe: #4fb0e8; --c-rush: #f2766c; --c-labo: #ec7fbd; --c-labyrinthe: #76bbff; --c-simon: #4fd3d9; --c-escape: #e2c15a; --c-mbot: #a5a2fb;
     --prof: #dfe4ee; --prof-fg: #141925; --prof-surface: #222937;
     color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
   --bg: #11151d; --surface: #1a202b; --ink: #e8ecf3; --muted: #9aa5b6; --line: #2b3342; --accent: #7c9cff;
-  --c-store: #4fc095; --c-cereales: #f0a83a; --c-ombre: #a68bf0; --c-classe: #4fb0e8; --c-rush: #f2766c; --c-labo: #ec7fbd; --c-labyrinthe: #76bbff; --c-simon: #4fd3d9; --c-escape: #e2c15a;
+  --c-store: #4fc095; --c-cereales: #f0a83a; --c-ombre: #a68bf0; --c-classe: #4fb0e8; --c-rush: #f2766c; --c-labo: #ec7fbd; --c-labyrinthe: #76bbff; --c-simon: #4fd3d9; --c-escape: #e2c15a; --c-mbot: #a5a2fb;
     --prof: #dfe4ee; --prof-fg: #141925; --prof-surface: #222937;
   color-scheme: dark;
 }
@@ -120,7 +121,7 @@ footer { margin-top: 12px; padding-top: 20px; border-top: 1px solid var(--line);
       <h1>Mes outils de classe</h1>
       <p class="sub">Tous les outils créés pour mes élèves, rangés par projet. Un clic pour ouvrir, un autre pour copier le lien à partager.</p>
     </div>
-    <span class="count">9 projets · 19 outils</span>
+    <span class="count">10 projets · 21 outils</span>
   </header>
 
   <div class="toolbar">
@@ -135,6 +136,7 @@ footer { margin-top: 12px; padding-top: 20px; border-top: 1px solid var(--line);
     <a href="#labyrinthe-robotise" style="--c:var(--c-labyrinthe)">Labyrinthe robotisé</a>
     <a href="#simon-retro-game" style="--c: var(--c-simon)">Simon Rétro Game</a>
     <a href="#escape-lab" style="--c: var(--c-escape)">Escape Lab</a>
+    <a href="#mbot-challenge" style="--c: var(--c-mbot)">mBot Challenge</a>
     <a href="#theatre" style="--c: var(--c-ombre)">Théâtre d'ombre</a>
     <a href="#robot-rush" style="--c: var(--c-rush)">Robot Rush</a>
     <a href="#labo-blocs" style="--c: var(--c-labo)">Labo Blocs</a>
@@ -426,6 +428,61 @@ footer { margin-top: 12px; padding-top: 20px; border-top: 1px solid var(--line);
               <li><a href="https://anlito.github.io/escape-lab/site/prof.html" target="_blank" rel="noopener">Fiches mécaniques, composants, synchronisation</a></li>
               <li><a href="https://anlito.github.io/escape-lab/site/regie.html" target="_blank" rel="noopener">Régie du jour J</a></li>
               <li><a href="https://github.com/Anlito/escape-lab/blob/main/docs/mode-emploi-professeur.md" target="_blank" rel="noopener">Mode d'emploi (GitHub)</a></li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== Projet mBot Challenge ===== -->
+    <section class="project" id="mbot-challenge" style="--c: var(--c-mbot)">
+      <div class="p-head">
+        <div class="p-level">Projet · 3e</div>
+        <h2>mBot Challenge</h2>
+        <p>Chaque écurie prépare le grand tournoi : permis mBot et défis programmés avec Labo Blocs, affiche A3 pour le vote des autres classes, style du mBot, vidéos, séances menées par le chef de projet et racontées par le reporter.</p>
+        <span class="n">2 outils</span>
+      </div>
+      <div class="tools">
+        <article class="tool">
+          <div class="who"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c0 1.5 3 3 6 3s6-1.5 6-3v-5"/></svg>Pour les élèves</div>
+          <div class="top">
+            <div class="badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="8" width="14" height="9" rx="2"/><path d="M9 8V5h6v3M9 12h.01M15 12h.01M7 17v2.5M17 17v2.5"/></svg></div>
+            <div><div class="kind">Espace de l'écurie</div><h3>mBot Challenge · Élèves</h3></div>
+          </div>
+          <p class="desc">Paddock de l'écurie (couleur, logo, rôles), séance (point de départ et de fin du chef de projet, rapport du reporter avec photos floutées), permis mBot de chaque équipier, défis et carnet d'essais chronométré, affiche, pièces 3D, vidéos, QCM. Travail enregistré dans le dossier de la classe.</p>
+          <div class="actions">
+            <a class="open" href="https://anlito.github.io/mbot-challenge/" target="_blank" rel="noopener">Ouvrir l'outil</a>
+            <button class="copy" type="button" data-url="https://anlito.github.io/mbot-challenge/">Copier le lien</button>
+          </div>
+          <p class="url">anlito.github.io/mbot-challenge</p>
+          <div class="more">
+            <h4>Documents</h4>
+            <ul>
+              <li><a href="https://anlito.github.io/mbot-challenge/fiches.html" target="_blank" rel="noopener">Fiches à imprimer : démarrage, règles du tournoi, affiche et style</a></li>
+              <li><a href="https://github.com/Anlito/mbot-challenge" target="_blank" rel="noopener">Code source (GitHub)</a></li>
+            </ul>
+          </div>
+          <div class="prof"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="15" r="4"/><path d="m11 12 9-9M17 6l3 3M14 9l2 2"/></svg><div><strong>Pour le professeur</strong><p>Aucun lien depuis l'écran des élèves : passer par la fiche « mBot Challenge · Professeur » ci-contre.</p></div></div>
+        </article>
+
+        <article class="tool is-prof">
+          <div class="who"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="1.5"/><path d="M7 20h10M12 16v4M7 9h6M7 12h4"/></svg>Pour le professeur</div>
+          <div class="top">
+            <div class="badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 21V4M5 4h13l-3 4.5 3 4.5H5"/></svg></div>
+            <div><div class="kind">Suivi, notation et tournoi</div><h3>mBot Challenge · Professeur</h3></div>
+          </div>
+          <p class="desc">Classe en direct et « À regarder », fiche de chaque écurie, notation sur 7 critères avec ajustement individuel, exports Excel et Pronote, planche des affiches. Régie du tournoi : chronos au clavier, Récolte, votes, jury, classements, écran projeté et podium.</p>
+          <div class="actions">
+            <a class="open" href="https://anlito.github.io/mbot-challenge/prof.html" target="_blank" rel="noopener">Ouvrir l'outil</a>
+            <button class="copy" type="button" data-url="https://anlito.github.io/mbot-challenge/prof.html">Copier le lien</button>
+          </div>
+          <p class="url">anlito.github.io/mbot-challenge/prof.html</p>
+          <div class="more">
+            <h4>Documents</h4>
+            <ul>
+              <li><a href="https://anlito.github.io/mbot-challenge/regie.html" target="_blank" rel="noopener">Régie du tournoi (avec l'écran projeté)</a></li>
+              <li><a href="https://anlito.github.io/mbot-challenge/fiches.html" target="_blank" rel="noopener">Fiches à imprimer</a></li>
+              <li><a href="https://github.com/Anlito/mbot-challenge/blob/main/LISEZ-MOI.md" target="_blank" rel="noopener">Mode d'emploi (GitHub)</a></li>
             </ul>
           </div>
         </article>

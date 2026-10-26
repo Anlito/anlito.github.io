@@ -1,7 +1,9 @@
 # Mes outils de classe
 
 <!-- suivi-maintenance:debut -->
-## État du projet et améliorations documentées — 23 octobre 2026
+## État du projet et améliorations documentées — 26 octobre 2026
+
+- Une rubrique mBot Challenge · 3e a été ajoutée (couleur `--c-mbot`) : fiche élèves (`mbot-challenge/`, avec les fiches à imprimer) et fiche professeur (`prof.html`, avec `regie.html` et les fiches en documents). Menu et compteurs mis à jour (10 projets · 21 outils).
 
 - Une rubrique Escape Lab · 3e a été ajoutée (couleur `--c-escape`) : fiche élèves (`site/`) et fiche professeur (`site/?prof`, avec `prof.html` et `regie.html` en documents). Menu et compteurs mis à jour (9 projets · 19 outils).
 
@@ -70,6 +72,8 @@ Quand l'original change, recopier le fichier ici.
 | Simon Rétro Game | Simon Rétro Game · Professeur | https://anlito.github.io/simon-retro-game/prof.html |
 | Escape Lab | Escape Lab · Élèves | https://anlito.github.io/escape-lab/site/ |
 | Escape Lab | Escape Lab · Professeur (suivi, pilotage, évaluation ; fiches et synchronisation dans prof.html ; regie.html) | https://anlito.github.io/escape-lab/site/?prof |
+| mBot Challenge | mBot Challenge · Élèves (fiches à imprimer : fiches.html) | https://anlito.github.io/mbot-challenge/ |
+| mBot Challenge | mBot Challenge · Professeur (régie du tournoi : regie.html, écran projeté) | https://anlito.github.io/mbot-challenge/prof.html |
 | Théâtre d'ombre | Théâtre d'ombre augmenté | https://anlito.github.io/theatre-ombre/ |
 | Théâtre d'ombre | Théâtre d'ombre · Professeur | https://anlito.github.io/theatre-ombre/prof.html |
 | Robot Rush | Robot Rush · Jouer (élèves, hébergé sur Render) | https://robot-rush.onrender.com/jouer |
