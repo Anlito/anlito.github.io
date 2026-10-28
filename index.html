@@ -27,6 +27,7 @@
   --c-simon: #0b7a83;
   --c-escape: #8a6a12;
   --c-mbot: #4338ca;
+  --c-segpa: #1d6b38;
   --prof: #262c3a;
   --prof-fg: #ffffff;
   --prof-surface: #e9ecf2;
@@ -36,14 +37,14 @@
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
     --bg: #11151d; --surface: #1a202b; --ink: #e8ecf3; --muted: #9aa5b6; --line: #2b3342; --accent: #7c9cff;
-    --c-store: #4fc095; --c-cereales: #f0a83a; --c-ombre: #a68bf0; --c-classe: #4fb0e8; --c-rush: #f2766c; --c-labo: #ec7fbd; --c-labyrinthe: #76bbff; --c-simon: #4fd3d9; --c-escape: #e2c15a; --c-mbot: #a5a2fb;
+    --c-store: #4fc095; --c-cereales: #f0a83a; --c-ombre: #a68bf0; --c-classe: #4fb0e8; --c-rush: #f2766c; --c-labo: #ec7fbd; --c-labyrinthe: #76bbff; --c-simon: #4fd3d9; --c-escape: #e2c15a; --c-mbot: #a5a2fb; --c-segpa: #6fd08f;
     --prof: #dfe4ee; --prof-fg: #141925; --prof-surface: #222937;
     color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
   --bg: #11151d; --surface: #1a202b; --ink: #e8ecf3; --muted: #9aa5b6; --line: #2b3342; --accent: #7c9cff;
-  --c-store: #4fc095; --c-cereales: #f0a83a; --c-ombre: #a68bf0; --c-classe: #4fb0e8; --c-rush: #f2766c; --c-labo: #ec7fbd; --c-labyrinthe: #76bbff; --c-simon: #4fd3d9; --c-escape: #e2c15a; --c-mbot: #a5a2fb;
+  --c-store: #4fc095; --c-cereales: #f0a83a; --c-ombre: #a68bf0; --c-classe: #4fb0e8; --c-rush: #f2766c; --c-labo: #ec7fbd; --c-labyrinthe: #76bbff; --c-simon: #4fd3d9; --c-escape: #e2c15a; --c-mbot: #a5a2fb; --c-segpa: #6fd08f;
     --prof: #dfe4ee; --prof-fg: #141925; --prof-surface: #222937;
   color-scheme: dark;
 }
@@ -121,7 +122,7 @@ footer { margin-top: 12px; padding-top: 20px; border-top: 1px solid var(--line);
       <h1>Mes outils de classe</h1>
       <p class="sub">Tous les outils créés pour mes élèves, rangés par projet. Un clic pour ouvrir, un autre pour copier le lien à partager.</p>
     </div>
-    <span class="count">10 projets · 21 outils</span>
+    <span class="count">11 projets · 23 outils</span>
   </header>
 
   <div class="toolbar">
@@ -136,6 +137,7 @@ footer { margin-top: 12px; padding-top: 20px; border-top: 1px solid var(--line);
     <a href="#labyrinthe-robotise" style="--c:var(--c-labyrinthe)">Labyrinthe robotisé</a>
     <a href="#simon-retro-game" style="--c: var(--c-simon)">Simon Rétro Game</a>
     <a href="#escape-lab" style="--c: var(--c-escape)">Escape Lab</a>
+    <a href="#segpa" style="--c: var(--c-segpa)">6e SEGPA</a>
     <a href="#mbot-challenge" style="--c: var(--c-mbot)">mBot Challenge</a>
     <a href="#theatre" style="--c: var(--c-ombre)">Théâtre d'ombre</a>
     <a href="#robot-rush" style="--c: var(--c-rush)">Robot Rush</a>
@@ -435,6 +437,59 @@ footer { margin-top: 12px; padding-top: 20px; border-top: 1px solid var(--line);
     </section>
 
     <!-- ===== Projet mBot Challenge ===== -->
+    <!-- ===== Dossier 6e SEGPA ===== -->
+    <section class="project" id="segpa" style="--c: var(--c-segpa)">
+      <div class="p-head">
+        <div class="p-level">Dossier · 6e SEGPA</div>
+        <h2>6e SEGPA</h2>
+        <p>Des projets au même squelette, pour des élèves qui découvrent l'ordinateur et lisent peu : une chose par écran, pictogrammes, lecture à voix haute, photos. Premier projet : « Je démonte un objet technique » (taille-crayon à manivelle). Voiture à ballon et stop motion à venir.</p>
+        <span class="n">2 outils</span>
+      </div>
+      <div class="tools">
+        <article class="tool">
+          <div class="who"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c0 1.5 3 3 6 3s6-1.5 6-3v-5"/></svg>Pour les élèves</div>
+          <div class="top">
+            <div class="badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="12" height="11" rx="2"/><circle cx="9" cy="13.5" r="2"/><path d="M15 12h3l2-4"/><circle cx="20.5" cy="7" r="1.5"/><path d="M6 8V6h6v2"/></svg></div>
+            <div><div class="kind">Projets de l'année</div><h3>6e SEGPA · Élèves</h3></div>
+          </div>
+          <p class="desc">Je démonte un objet technique : présentation, règles du matériel, tableau des pièces en photos, mesure au réglet et dessin à la règle, remontage à l'envers, questions écrites, rangement, bilan en smileys. Boutons-prénoms, travail et photos enregistrés dans le dossier de l'équipe sur le réseau.</p>
+          <div class="actions">
+            <a class="open" href="https://anlito.github.io/segpa/" target="_blank" rel="noopener">Ouvrir l'outil</a>
+            <button class="copy" type="button" data-url="https://anlito.github.io/segpa/">Copier le lien</button>
+          </div>
+          <p class="url">anlito.github.io/segpa</p>
+          <div class="more">
+            <h4>Documents</h4>
+            <ul>
+              <li><a href="https://github.com/Anlito/segpa" target="_blank" rel="noopener">Code source (GitHub)</a></li>
+            </ul>
+          </div>
+          <div class="prof"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="15" r="4"/><path d="m11 12 9-9M17 6l3 3M14 9l2 2"/></svg><div><strong>Pour le professeur</strong><p>Aucun lien depuis l'écran des élèves : passer par la fiche « 6e SEGPA · Professeur » ci-contre.</p></div></div>
+        </article>
+
+        <article class="tool is-prof">
+          <div class="who"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="1.5"/><path d="M7 20h10M12 16v4M7 9h6M7 12h4"/></svg>Pour le professeur</div>
+          <div class="top">
+            <div class="badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 13V6a1.5 1.5 0 013 0v5"/><path d="M11 11V4a1.5 1.5 0 013 0v7"/><path d="M14 11V5.5a1.5 1.5 0 013 0V12"/><path d="M17 10a1.5 1.5 0 013 0v5a7 7 0 01-7 7h-1a7 7 0 01-5.6-2.8L3 15.5a1.6 1.6 0 012.4-2L8 16"/></svg></div>
+            <div><div class="kind">Suivi et évaluation</div><h3>6e SEGPA · Professeur</h3></div>
+          </div>
+          <p class="desc">Classe en direct (aide demandée en premier, dernière photo, repères), fiche de chaque équipe (album, pièces et réponses, mesures), évaluation sur 7 critères avec note /20 et ceinture, exports Excel, Pronote et Carnet de classe, feuilles ceinture à imprimer. Écrans élèves en démonstration.</p>
+          <div class="actions">
+            <a class="open" href="https://anlito.github.io/segpa/professeur.html" target="_blank" rel="noopener">Ouvrir l'outil</a>
+            <button class="copy" type="button" data-url="https://anlito.github.io/segpa/professeur.html">Copier le lien</button>
+          </div>
+          <p class="url">anlito.github.io/segpa/professeur.html</p>
+          <div class="more">
+            <h4>Documents</h4>
+            <ul>
+              <li><a href="https://github.com/Anlito/segpa/blob/main/LISEZ-MOI.md" target="_blank" rel="noopener">Mode d'emploi (GitHub)</a></li>
+              <li><a href="https://github.com/Anlito/segpa/blob/main/RECETTE.md" target="_blank" rel="noopener">Recette sur un poste du collège (GitHub)</a></li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
     <section class="project" id="mbot-challenge" style="--c: var(--c-mbot)">
       <div class="p-head">
         <div class="p-level">Projet · 3e</div>

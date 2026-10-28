@@ -1,7 +1,9 @@
 # Mes outils de classe
 
 <!-- suivi-maintenance:debut -->
-## État du projet et améliorations documentées — 26 octobre 2026
+## État du projet et améliorations documentées — 28 octobre 2026
+
+- Une rubrique 6e SEGPA a été ajoutée (couleur `--c-segpa`) : fiche élèves (`segpa/`, le portail des projets SEGPA, sans lien professeur) et fiche professeur (`segpa/professeur.html`, page non liée depuis l'écran des élèves). Menu et compteurs mis à jour (11 projets · 23 outils). Premier projet : « Je démonte un objet technique » (taille-crayon).
 
 - Une rubrique mBot Challenge · 3e a été ajoutée (couleur `--c-mbot`) : fiche élèves (`mbot-challenge/`, avec les fiches à imprimer) et fiche professeur (`prof.html`, avec `regie.html` et les fiches en documents). Menu et compteurs mis à jour (10 projets · 21 outils).
 
@@ -76,6 +78,8 @@ Quand l'original change, recopier le fichier ici.
 | mBot Challenge | mBot Challenge · Professeur (régie du tournoi : regie.html, écran projeté) | https://anlito.github.io/mbot-challenge/prof.html |
 | Théâtre d'ombre | Théâtre d'ombre augmenté | https://anlito.github.io/theatre-ombre/ |
 | Théâtre d'ombre | Théâtre d'ombre · Professeur | https://anlito.github.io/theatre-ombre/prof.html |
+| 6e SEGPA | 6e SEGPA · Élèves (taille-crayon ; voiture à ballon et stop motion à venir) | https://anlito.github.io/segpa/ |
+| 6e SEGPA | 6e SEGPA · Professeur (suivi, évaluation, exports) | https://anlito.github.io/segpa/professeur.html |
 | Robot Rush | Robot Rush · Jouer (élèves, hébergé sur Render) | https://robot-rush.onrender.com/jouer |
 | Robot Rush | Robot Rush · Professeur | https://robot-rush.onrender.com/admin |
 | Labo Blocs | Labo Blocs · Parcours (choix du parcours) | https://anlito.github.io/labo-blocs/site/eleves.html |
