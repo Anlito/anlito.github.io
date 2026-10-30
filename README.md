@@ -3,6 +3,7 @@
 <!-- suivi-maintenance:debut -->
 ## État du projet et améliorations documentées — 28 octobre 2026
 
+- Rubrique 6e SEGPA : la course de voitures à ballon est en ligne (fiche élèves mise à jour, fiche « Voiture à ballon · Professeur » ajoutée avec la course et les gabarits). Compteurs : 11 projets · 24 outils.
 - Une rubrique 6e SEGPA a été ajoutée (couleur `--c-segpa`) : fiche élèves (`segpa/`, le portail des projets SEGPA, sans lien professeur) et fiche professeur (`segpa/professeur.html`, page non liée depuis l'écran des élèves). Menu et compteurs mis à jour (11 projets · 23 outils). Premier projet : « Je démonte un objet technique » (taille-crayon).
 
 - Une rubrique mBot Challenge · 3e a été ajoutée (couleur `--c-mbot`) : fiche élèves (`mbot-challenge/`, avec les fiches à imprimer) et fiche professeur (`prof.html`, avec `regie.html` et les fiches en documents). Menu et compteurs mis à jour (10 projets · 21 outils).
