@@ -4,6 +4,7 @@
 ## État du projet et améliorations documentées — 1er novembre 2026
 
 - Nouvelle page **Mes projets perso** (`perso/index.html`, https://anlito.github.io/perso/) pour les applis de la maison, séparée des outils de classe : Petit Studio, Dragons & découvertes, L'aventure des sons (rubrique « Pour les enfants ») ; Monstre Box et Lé Kdo 2 Noyel (rubrique « En famille »). Mêmes styles et mêmes fiches que la page de classe, couleurs `--c-kids` et `--c-fetes` définies dans la page. Petit Studio a été retiré de la page de classe (retour à 11 projets · 24 outils) ; un lien discret vers la page perso est dans le pied de page.
+- Rubrique 6e SEGPA simplifiée : une fiche Élèves (bouton vers segpa/, liens directs vers chaque projet) et une fiche Professeur (bouton vers segpa/professeur.html, liens directs vers le suivi de chaque projet et la course). Compteurs : 11 projets · 23 outils.
 - Rubrique 6e SEGPA : la course de voitures à ballon est en ligne (fiche élèves mise à jour, fiche « Voiture à ballon · Professeur » ajoutée avec la course et les gabarits). Compteurs : 11 projets · 24 outils.
 - Une rubrique 6e SEGPA a été ajoutée (couleur `--c-segpa`) : fiche élèves (`segpa/`, le portail des projets SEGPA, sans lien professeur) et fiche professeur (`segpa/professeur.html`, page non liée depuis l'écran des élèves). Menu et compteurs mis à jour (11 projets · 23 outils). Premier projet : « Je démonte un objet technique » (taille-crayon).
 
