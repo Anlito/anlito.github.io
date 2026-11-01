@@ -28,7 +28,6 @@
   --c-escape: #8a6a12;
   --c-mbot: #4338ca;
   --c-segpa: #1d6b38;
-  --c-studio: #c2410c;
   --prof: #262c3a;
   --prof-fg: #ffffff;
   --prof-surface: #e9ecf2;
@@ -38,14 +37,14 @@
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
     --bg: #11151d; --surface: #1a202b; --ink: #e8ecf3; --muted: #9aa5b6; --line: #2b3342; --accent: #7c9cff;
-    --c-store: #4fc095; --c-cereales: #f0a83a; --c-ombre: #a68bf0; --c-classe: #4fb0e8; --c-rush: #f2766c; --c-labo: #ec7fbd; --c-labyrinthe: #76bbff; --c-simon: #4fd3d9; --c-escape: #e2c15a; --c-mbot: #a5a2fb; --c-segpa: #6fd08f; --c-studio: #ff9a62;
+    --c-store: #4fc095; --c-cereales: #f0a83a; --c-ombre: #a68bf0; --c-classe: #4fb0e8; --c-rush: #f2766c; --c-labo: #ec7fbd; --c-labyrinthe: #76bbff; --c-simon: #4fd3d9; --c-escape: #e2c15a; --c-mbot: #a5a2fb; --c-segpa: #6fd08f;
     --prof: #dfe4ee; --prof-fg: #141925; --prof-surface: #222937;
     color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
   --bg: #11151d; --surface: #1a202b; --ink: #e8ecf3; --muted: #9aa5b6; --line: #2b3342; --accent: #7c9cff;
-  --c-store: #4fc095; --c-cereales: #f0a83a; --c-ombre: #a68bf0; --c-classe: #4fb0e8; --c-rush: #f2766c; --c-labo: #ec7fbd; --c-labyrinthe: #76bbff; --c-simon: #4fd3d9; --c-escape: #e2c15a; --c-mbot: #a5a2fb; --c-segpa: #6fd08f; --c-studio: #ff9a62;
+  --c-store: #4fc095; --c-cereales: #f0a83a; --c-ombre: #a68bf0; --c-classe: #4fb0e8; --c-rush: #f2766c; --c-labo: #ec7fbd; --c-labyrinthe: #76bbff; --c-simon: #4fd3d9; --c-escape: #e2c15a; --c-mbot: #a5a2fb; --c-segpa: #6fd08f;
     --prof: #dfe4ee; --prof-fg: #141925; --prof-surface: #222937;
   color-scheme: dark;
 }
@@ -123,7 +122,7 @@ footer { margin-top: 12px; padding-top: 20px; border-top: 1px solid var(--line);
       <h1>Mes outils de classe</h1>
       <p class="sub">Tous les outils créés pour mes élèves, rangés par projet. Un clic pour ouvrir, un autre pour copier le lien à partager.</p>
     </div>
-    <span class="count">12 projets · 25 outils</span>
+    <span class="count">11 projets · 24 outils</span>
   </header>
 
   <div class="toolbar">
@@ -144,7 +143,6 @@ footer { margin-top: 12px; padding-top: 20px; border-top: 1px solid var(--line);
     <a href="#robot-rush" style="--c: var(--c-rush)">Robot Rush</a>
     <a href="#labo-blocs" style="--c: var(--c-labo)">Labo Blocs</a>
     <a href="#classe" style="--c: var(--c-classe)">Gestion de classe</a>
-    <a href="#petit-studio" style="--c: var(--c-studio)">Petit Studio</a>
   </nav>
   </div>
 
@@ -788,41 +786,9 @@ footer { margin-top: 12px; padding-top: 20px; border-top: 1px solid var(--line);
         </article>
       </div>
     </section>
-    <!-- ===== Petit Studio : musique pour les petits ===== -->
-    <section class="project" id="petit-studio" style="--c: var(--c-studio)">
-      <div class="p-head">
-        <div class="p-level">Maternelle · 3 à 8 ans</div>
-        <h2>Petit Studio</h2>
-        <p>Un pad musical à boucles pour les plus jeunes, sur tablette : on touche des sons, on les empile en boucle, on ajoute sa voix. Tout se fait avec des images, sans savoir lire.</p>
-        <span class="n">1 outil</span>
-      </div>
-      <div class="tools">
-        <article class="tool">
-          <div class="who"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c0 1.5 3 3 6 3s6-1.5 6-3v-5"/></svg>Pour les élèves</div>
-          <div class="top">
-            <div class="badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg></div>
-            <div><div class="kind">Application tablette · hors ligne</div><h3>Petit Studio</h3></div>
-          </div>
-          <p class="desc">32 sons en 4 rubriques (percussions, notes, animaux, bruitages), boucle de 8 temps jusqu'à 6 pistes, 3 vitesses, 5 enregistrements au micro et 3 musiques gardées sur la tablette. S'installe sur l'écran d'accueil (iPad ou Android) et marche sans internet.</p>
-          <div class="actions">
-            <a class="open" href="https://anlito.github.io/petit-studio/" target="_blank" rel="noopener">Ouvrir l'outil</a>
-            <button class="copy" type="button" data-url="https://anlito.github.io/petit-studio/">Copier le lien</button>
-          </div>
-          <p class="url">anlito.github.io/petit-studio</p>
-          <div class="more">
-            <h4>Documents</h4>
-            <ul>
-              <li><a href="https://github.com/Anlito/petit-studio#installer-sur-la-tablette" target="_blank" rel="noopener">Installer sur la tablette</a></li>
-              <li><a href="https://claude.ai/artifact/6nPf76VFAWKRwTa48Kz8nz" target="_blank" rel="noopener">Cahier des charges et maquette</a></li>
-              <li><a href="https://github.com/Anlito/petit-studio" target="_blank" rel="noopener">Code source (GitHub)</a></li>
-            </ul>
-          </div>
-        </article>
-      </div>
-    </section>
   </main>
 
-  <footer>Les fiches « Pour les élèves » sont publiques : on peut donner leur lien en classe. Les fiches « Pour le professeur » ne sont pas à donner aux élèves. Les documents (briefs, cahiers des charges) ne s'ouvrent que pour moi.</footer>
+  <footer>Les fiches « Pour les élèves » sont publiques : on peut donner leur lien en classe. Les fiches « Pour le professeur » ne sont pas à donner aux élèves. Les documents (briefs, cahiers des charges) ne s'ouvrent que pour moi. Mes applis pour la maison sont sur une page à part : <a href="perso/">mes projets perso</a>.</footer>
 </div>
 
 <script>

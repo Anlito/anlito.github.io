@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Les applis et sites faits par Thomas pour la maison : Petit Studio, Dragons & découvertes, L'aventure des sons, Monstre Box, Lé Kdo 2 Noyel.">
+<style>:root{color-scheme:light}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Mes projets perso</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Atkinson+Hyperlegible:wght@400;700&display=swap">
+<style>
+/* Layout : une bande par projet (titre du projet à gauche, fiches de ses outils à droite), une couleur par projet ; tout s'empile sur téléphone */
+:root {
+  --bg: #f3f5f8;
+  --surface: #ffffff;
+  --ink: #1b2433;
+  --muted: #5a6577;
+  --line: #dde2ea;
+  --accent: #2f5bd3;
+  --c-store: #23896a;
+  --c-cereales: #c27a0c;
+  --c-ombre: #6d4bc4;
+  --c-classe: #1f7fb8;
+  --c-rush: #cf3f35;
+  --c-labo: #b8327c;
+  --c-labyrinthe: #0055cc;
+  --c-simon: #0b7a83;
+  --c-escape: #8a6a12;
+  --c-mbot: #4338ca;
+  --c-segpa: #1d6b38;
+  --prof: #262c3a;
+  --prof-fg: #ffffff;
+  --prof-surface: #e9ecf2;
+  --display: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --body: "Atkinson Hyperlegible", "Segoe UI", system-ui, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #11151d; --surface: #1a202b; --ink: #e8ecf3; --muted: #9aa5b6; --line: #2b3342; --accent: #7c9cff;
+    --c-store: #4fc095; --c-cereales: #f0a83a; --c-ombre: #a68bf0; --c-classe: #4fb0e8; --c-rush: #f2766c; --c-labo: #ec7fbd; --c-labyrinthe: #76bbff; --c-simon: #4fd3d9; --c-escape: #e2c15a; --c-mbot: #a5a2fb; --c-segpa: #6fd08f;
+    --prof: #dfe4ee; --prof-fg: #141925; --prof-surface: #222937;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #11151d; --surface: #1a202b; --ink: #e8ecf3; --muted: #9aa5b6; --line: #2b3342; --accent: #7c9cff;
+  --c-store: #4fc095; --c-cereales: #f0a83a; --c-ombre: #a68bf0; --c-classe: #4fb0e8; --c-rush: #f2766c; --c-labo: #ec7fbd; --c-labyrinthe: #76bbff; --c-simon: #4fd3d9; --c-escape: #e2c15a; --c-mbot: #a5a2fb; --c-segpa: #6fd08f;
+    --prof: #dfe4ee; --prof-fg: #141925; --prof-surface: #222937;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font-family: var(--body); font-size: 16px; line-height: 1.5; }
+.wrap { max-width: 1180px; margin: 0 auto; padding-inline: 20px; padding-block: 40px 56px; }
+header { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 12px 24px; margin-bottom: 20px; }
+h1 { font-family: var(--display); font-weight: 700; font-size: clamp(1.9rem, 4vw, 2.6rem); line-height: 1.1; margin: 0; text-wrap: balance; letter-spacing: -0.01em; }
+.sub { color: var(--muted); margin: 6px 0 0; max-width: 60ch; }
+.count { font-size: .8rem; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); font-variant-numeric: tabular-nums; }
+nav.jump { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 28px; }
+nav.jump a { --c: var(--accent); display: inline-flex; align-items: center; gap: 8px; text-decoration: none; color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 999px; padding: 6px 14px; font-size: .9rem; }
+nav.jump a::before { content: ""; width: 9px; height: 9px; border-radius: 50%; background: var(--c); }
+nav.jump a:hover { border-color: var(--c); }
+
+.project { --c: var(--accent); display: grid; grid-template-columns: 250px minmax(0, 1fr); gap: 20px 28px; padding-block: 28px; border-top: 1px solid var(--line); scroll-margin-top: 16px; }
+.p-head { min-width: 0; }
+.p-level { font-size: .75rem; text-transform: uppercase; letter-spacing: .08em; color: var(--c); font-weight: 700; }
+.p-head h2 { font-family: var(--display); font-weight: 700; font-size: 1.6rem; line-height: 1.15; margin: 4px 0 8px; text-wrap: balance; }
+.p-head p { margin: 0; color: var(--muted); font-size: .95rem; }
+.p-head .n { display: inline-block; margin-top: 10px; font-size: .8rem; color: var(--muted); }
+.tools { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 290px), 1fr)); gap: 16px; min-width: 0; }
+@media (max-width: 760px) { .project { grid-template-columns: 1fr; } }
+
+.tool { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 18px; display: flex; flex-direction: column; gap: 12px; min-width: 0; }
+.tool { position: relative; overflow: hidden; padding-top: 0; }
+.who { display: flex; align-items: center; gap: 8px; margin-inline: -18px; padding: 7px 18px; font-size: .78rem; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; background: color-mix(in srgb, var(--c) 14%, transparent); color: var(--c); }
+.who svg { width: 16px; height: 16px; flex: none; }
+.tool.is-prof { background: var(--prof-surface); border: 2px solid var(--prof); }
+.tool.is-prof .who { background: var(--prof); color: var(--prof-fg); }
+.filter { display: inline-flex; flex-wrap: wrap; gap: 4px; padding: 4px; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; }
+.filter button { font: inherit; font-size: .9rem; font-weight: 700; display: inline-flex; align-items: center; gap: 7px; border: 0; background: transparent; color: var(--muted); padding: 7px 14px; border-radius: 9px; cursor: pointer; }
+.filter button svg { width: 16px; height: 16px; }
+.filter button[aria-pressed="true"] { background: var(--ink); color: var(--bg); }
+.filter button[data-f="prof"][aria-pressed="true"] { background: var(--prof); color: var(--prof-fg); }
+.toolbar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 28px; }
+.toolbar nav.jump { margin-bottom: 0; }
+body[data-f="eleves"] .tool.is-prof, body[data-f="prof"] .tool:not(.is-prof), body[data-f="eleves"] .tool .prof { display: none; }
+.project.empty, nav.jump a.empty { display: none; }
+.top { display: flex; gap: 12px; align-items: flex-start; }
+.badge { flex: none; width: 42px; height: 42px; border-radius: 11px; background: color-mix(in srgb, var(--c) 16%, transparent); color: var(--c); display: grid; place-items: center; }
+.badge svg { width: 24px; height: 24px; }
+h3 { font-family: var(--display); font-weight: 700; font-size: 1.2rem; line-height: 1.2; margin: 1px 0 0; }
+.kind { font-size: .72rem; text-transform: uppercase; letter-spacing: .08em; color: var(--c); font-weight: 700; }
+.only-prof { font-size: .7rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: var(--c); border: 1px solid currentColor; border-radius: 999px; padding: 1px 8px; margin-left: 6px; vertical-align: 3px; white-space: nowrap; }
+.desc { margin: 0; color: var(--muted); font-size: .94rem; }
+.actions { display: flex; flex-wrap: wrap; gap: 8px; }
+.open { display: inline-flex; align-items: center; gap: 8px; background: var(--c); color: #fff; text-decoration: none; font-weight: 700; padding: 9px 15px; border-radius: 10px; }
+.open:hover { filter: brightness(1.08); }
+:root[data-theme="dark"] .open { color: #10141b; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .open { color: #10141b; } }
+.copy { font: inherit; font-size: .9rem; background: transparent; color: var(--ink); border: 1px solid var(--line); padding: 8px 13px; border-radius: 10px; cursor: pointer; }
+.copy:hover { border-color: var(--c); }
+.url { font-size: .8rem; color: var(--muted); word-break: break-all; margin: -4px 0 0; }
+.prof { border-left: 3px solid var(--prof); display: flex; gap: 10px; align-items: flex-start; background: color-mix(in srgb, var(--prof) 8%, transparent); border-radius: 10px; padding: 10px 12px; font-size: .9rem; }
+.prof svg { flex: none; width: 18px; height: 18px; color: var(--ink); margin-top: 2px; }
+.prof strong { display: block; font-size: .72rem; text-transform: uppercase; letter-spacing: .08em; color: var(--ink); }
+.prof p { margin: 0; }
+.prof a { color: var(--ink); font-weight: 700; text-underline-offset: 3px; text-decoration-color: var(--c); }
+.more { border-top: 1px solid var(--line); padding-top: 10px; margin-top: auto; }
+.more h4 { font-size: .72rem; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); margin: 0 0 6px; font-weight: 700; }
+.more ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 4px; }
+.more a { color: var(--ink); text-decoration: none; font-size: .92rem; display: inline-flex; gap: 6px; align-items: baseline; }
+.more a::before { content: "→"; color: var(--c); }
+.more a:hover { text-decoration: underline; text-decoration-color: var(--c); text-underline-offset: 3px; }
+a:focus-visible, button:focus-visible { outline: 3px solid var(--c, var(--accent)); outline-offset: 2px; }
+footer { margin-top: 12px; padding-top: 20px; border-top: 1px solid var(--line); color: var(--muted); font-size: .85rem; }
+</style>
+<style>
+/* Couleurs propres à cette page (les fiches gardent le style de la page des outils de classe) */
+:root { --c-kids: #c2410c; --c-fetes: #7c3aed; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --c-kids: #ff9a62; --c-fetes: #b79cff; } }
+:root[data-theme="dark"] { --c-kids: #ff9a62; --c-fetes: #b79cff; }
+.back { color: var(--ink); font-weight: 700; text-decoration: none; }
+.back:hover { text-decoration: underline; text-underline-offset: 3px; }
+footer a { color: var(--ink); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div>
+      <h1>Mes projets perso</h1>
+      <p class="sub">Les applis et les sites faits pour la maison et la famille. Un clic pour ouvrir, un autre pour copier le lien à partager.</p>
+    </div>
+    <span class="count">2 rubriques · 5 applis</span>
+  </header>
+
+  <div class="toolbar">
+    <a class="back" href="../">← Mes outils de classe</a>
+    <nav class="jump" aria-label="Aller à la rubrique">
+      <a href="#enfants" style="--c: var(--c-kids)">Pour les enfants</a>
+      <a href="#fetes" style="--c: var(--c-fetes)">En famille</a>
+    </nav>
+  </div>
+
+  <main>
+    <section class="project" id="enfants" style="--c: var(--c-kids)">
+      <div class="p-head">
+        <div class="p-level">Tablette · 3 à 8 ans</div>
+        <h2>Pour les enfants</h2>
+        <p>Des jeux et des applis pour apprendre et créer, pensés pour les petits : commandes en images, sans publicité, utilisables hors ligne une fois installés.</p>
+        <span class="n">3 applis</span>
+      </div>
+      <div class="tools">
+        <article class="tool">
+          <div class="who"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10z"/></svg>Pour les enfants</div>
+          <div class="top">
+            <div class="badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg></div>
+            <div><div class="kind">Musique · tablette hors ligne</div><h3>Petit Studio</h3></div>
+          </div>
+          <p class="desc">Pad musical à boucles : 32 sons en 4 rubriques (percussions, notes, animaux, bruitages), jusqu'à 6 pistes, 3 vitesses, 5 enregistrements au micro et 3 musiques gardées sur la tablette.</p>
+          <div class="actions">
+            <a class="open" href="https://anlito.github.io/petit-studio/" target="_blank" rel="noopener">Ouvrir</a>
+            <button class="copy" type="button" data-url="https://anlito.github.io/petit-studio/">Copier le lien</button>
+          </div>
+          <p class="url">anlito.github.io/petit-studio</p>
+          <div class="more">
+            <h4>Documents</h4>
+            <ul>
+              <li><a href="https://github.com/Anlito/petit-studio#installer-sur-la-tablette" target="_blank" rel="noopener">Installer sur la tablette</a></li>
+              <li><a href="https://claude.ai/artifact/6nPf76VFAWKRwTa48Kz8nz" target="_blank" rel="noopener">Cahier des charges et maquette</a></li>
+              <li><a href="https://github.com/Anlito/petit-studio" target="_blank" rel="noopener">Code source (GitHub)</a></li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="tool">
+          <div class="who"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10z"/></svg>Pour les enfants</div>
+          <div class="top">
+            <div class="badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 18c2-6 6-9 12-9l4-3-1 5c0 4-3 7-8 7H4z"/><circle cx="15" cy="11" r=".8" fill="currentColor"/><path d="M8 18l-2 3M12 18l-1 3"/></svg></div>
+            <div><div class="kind">Premiers apprentissages · 4 ans</div><h3>Dragons & découvertes</h3></div>
+          </div>
+          <p class="desc">Les petites découvertes d'une dragonne chevalière : lettres, Memory, chiffres et quantités, mélange des couleurs, avec une voix française. Profils par enfant et temps de jeu réglable par un parent.</p>
+          <div class="actions">
+            <a class="open" href="https://anlito.github.io/Dragonne-et-apprentissages/" target="_blank" rel="noopener">Ouvrir</a>
+            <button class="copy" type="button" data-url="https://anlito.github.io/Dragonne-et-apprentissages/">Copier le lien</button>
+          </div>
+          <p class="url">anlito.github.io/Dragonne-et-apprentissages</p>
+          <div class="more">
+            <h4>Documents</h4>
+            <ul>
+              <li><a href="https://github.com/Anlito/Dragonne-et-apprentissages" target="_blank" rel="noopener">Code source (GitHub)</a></li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="tool">
+          <div class="who"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10z"/></svg>Pour les enfants</div>
+          <div class="top">
+            <div class="badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z"/><path d="M4 19V5M9 7h6M9 11h4"/></svg></div>
+            <div><div class="kind">Lecture · tablette et téléphone</div><h3>L'aventure des sons</h3></div>
+          </div>
+          <p class="desc">Une aventure de lecture avec un dragon : sons complexes, syllabes et lettres proches, des défis et des trésors à gagner. Fonctionne hors ligne une fois installée.</p>
+          <div class="actions">
+            <a class="open" href="https://anlito.github.io/aventure-des-sons/" target="_blank" rel="noopener">Ouvrir</a>
+            <button class="copy" type="button" data-url="https://anlito.github.io/aventure-des-sons/">Copier le lien</button>
+          </div>
+          <p class="url">anlito.github.io/aventure-des-sons</p>
+          <div class="more">
+            <h4>Documents</h4>
+            <ul>
+              <li><a href="https://github.com/Anlito/aventure-des-sons#installer-sur-android-avec-chrome" target="_blank" rel="noopener">Installer sur Android</a></li>
+              <li><a href="https://github.com/Anlito/aventure-des-sons" target="_blank" rel="noopener">Code source (GitHub)</a></li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="project" id="fetes" style="--c: var(--c-fetes)">
+      <div class="p-head">
+        <div class="p-level">Fêtes de l'année</div>
+        <h2>En famille</h2>
+        <p>Pour les grandes occasions à la maison : une boîte à frissons pour Halloween et l'organisation de Noël avec toute la famille.</p>
+        <span class="n">2 applis</span>
+      </div>
+      <div class="tools">
+        <article class="tool">
+          <div class="who"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-5h4v5"/></svg>En famille</div>
+          <div class="top">
+            <div class="badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 6c-5 0-8 3-8 7s3 7 8 7 8-3 8-7-3-7-8-7z"/><path d="M12 6V3h2M9 12l1 1M15 12l-1 1M9 16h6"/></svg></div>
+            <div><div class="kind">Halloween · téléphone</div><h3>Monstre Box</h3></div>
+          </div>
+          <p class="desc">18 bruitages, une ambiance angoissante sans fin et une voix de monstre au micro. À relier à une enceinte Bluetooth, tenue éloignée du téléphone.</p>
+          <div class="actions">
+            <a class="open" href="https://anlito.github.io/monstre-box/" target="_blank" rel="noopener">Ouvrir</a>
+            <button class="copy" type="button" data-url="https://anlito.github.io/monstre-box/">Copier le lien</button>
+          </div>
+          <p class="url">anlito.github.io/monstre-box</p>
+          <div class="more">
+            <h4>Documents</h4>
+            <ul>
+              <li><a href="https://github.com/Anlito/monstre-box#utilisation" target="_blank" rel="noopener">Mode d'emploi</a></li>
+              <li><a href="https://github.com/Anlito/monstre-box" target="_blank" rel="noopener">Code source (GitHub)</a></li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="tool">
+          <div class="who"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-5h4v5"/></svg>En famille</div>
+          <div class="top">
+            <div class="badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="9" width="18" height="12" rx="1.5"/><path d="M3 13h18M12 9v12M12 9c-2-4-6-4-6-1.5S10 9 12 9zm0 0c2-4 6-4 6-1.5S14 9 12 9z"/></svg></div>
+            <div><div class="kind">Noël · site familial</div><h3>Lé Kdo 2 Noyel</h3></div>
+          </div>
+          <p class="desc">Toute la famille prépare Noël au même endroit : listes de cadeaux, cadeaux à offrir, repas, listes des enfants et Secret Santa. Chacun se connecte à sa famille.</p>
+          <div class="actions">
+            <a class="open" href="https://anlito.github.io/noel/" target="_blank" rel="noopener">Ouvrir</a>
+            <button class="copy" type="button" data-url="https://anlito.github.io/noel/">Copier le lien</button>
+          </div>
+          <p class="url">anlito.github.io/noel</p>
+          <div class="more">
+            <h4>Documents</h4>
+            <ul>
+              <li><a href="https://github.com/Anlito/noel" target="_blank" rel="noopener">Code source (GitHub)</a></li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>Ces pages sont publiques. Les applis pour enfants ne collectent rien et gardent tout sur l'appareil. Les documents (cahiers des charges) ne s'ouvrent que pour moi. Pour ajouter une appli, voir le README du dépôt.</footer>
+</div>
+
+<script>
+document.querySelectorAll(".copy").forEach(function (btn) {
+  btn.addEventListener("click", function () {
+    var url = btn.dataset.url, label = btn.textContent;
+    function done(msg) { btn.textContent = msg; setTimeout(function () { btn.textContent = label; }, 1800); }
+    function fallback() {
+      var p = btn.closest(".tool").querySelector(".url");
+      var r = document.createRange(); r.selectNodeContents(p);
+      var s = getSelection(); s.removeAllRanges(); s.addRange(r);
+      done("Sélectionné, faites Ctrl+C");
+    }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(url).then(function () { done("Lien copié"); }, fallback);
+    } else { fallback(); }
+  });
+});
+</script>
+</body>
+</html>

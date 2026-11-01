@@ -3,7 +3,7 @@
 <!-- suivi-maintenance:debut -->
 ## État du projet et améliorations documentées — 1er novembre 2026
 
-- Rubrique Petit Studio ajoutée (couleur `--c-studio`) : pad musical à boucles pour les 3–8 ans, application tablette installable et hors ligne (dépôt `Anlito/petit-studio`). Une fiche élèves, sans accès professeur. Menu et compteurs mis à jour (12 projets · 25 outils).
+- Nouvelle page **Mes projets perso** (`perso/index.html`, https://anlito.github.io/perso/) pour les applis de la maison, séparée des outils de classe : Petit Studio, Dragons & découvertes, L'aventure des sons (rubrique « Pour les enfants ») ; Monstre Box et Lé Kdo 2 Noyel (rubrique « En famille »). Mêmes styles et mêmes fiches que la page de classe, couleurs `--c-kids` et `--c-fetes` définies dans la page. Petit Studio a été retiré de la page de classe (retour à 11 projets · 24 outils) ; un lien discret vers la page perso est dans le pied de page.
 - Rubrique 6e SEGPA : la course de voitures à ballon est en ligne (fiche élèves mise à jour, fiche « Voiture à ballon · Professeur » ajoutée avec la course et les gabarits). Compteurs : 11 projets · 24 outils.
 - Une rubrique 6e SEGPA a été ajoutée (couleur `--c-segpa`) : fiche élèves (`segpa/`, le portail des projets SEGPA, sans lien professeur) et fiche professeur (`segpa/professeur.html`, page non liée depuis l'écran des élèves). Menu et compteurs mis à jour (11 projets · 23 outils). Premier projet : « Je démonte un objet technique » (taille-crayon).
 
@@ -47,6 +47,18 @@ Puis changer le nom, la description, le lien « Ouvrir l'outil », le lien de «
 Chaque fiche commence par un bandeau `<div class="who">` (« Pour les élèves » ou « Pour le professeur ») : copier celui d'une fiche du même type. Outil réservé au professeur : classe `is-prof` sur l'article (fond grisé, bandeau sombre, masqué par le filtre « Élèves »). Accès professeur dans un outil élève : encart `<div class="prof">` (sans jamais écrire le code : la page est publique).
 Mettre à jour les compteurs (« N projets · N outils » en haut, « N outils » du projet).
 
+## Page perso
+
+Les applis faites pour la maison et la famille ne vont pas dans `index.html` mais dans `perso/index.html` (https://anlito.github.io/perso/). Même principe : copier un bloc `<article class="tool">` dans la bonne rubrique (« Pour les enfants » ou « En famille ») et mettre à jour les compteurs (« N rubriques · N applis » en haut, « N applis » de la rubrique).
+
+| Rubrique | Appli | Adresse |
+|---|---|---|
+| Pour les enfants | Petit Studio | https://anlito.github.io/petit-studio/ |
+| Pour les enfants | Dragons & découvertes | https://anlito.github.io/Dragonne-et-apprentissages/ |
+| Pour les enfants | L'aventure des sons | https://anlito.github.io/aventure-des-sons/ |
+| En famille | Monstre Box | https://anlito.github.io/monstre-box/ |
+| En famille | Lé Kdo 2 Noyel | https://anlito.github.io/noel/ |
+
 ## Fichiers à télécharger
 
 Le dossier `fichiers/` contient des copies de fichiers d'autres dépôts, proposés en téléchargement sur la page
@@ -86,6 +98,5 @@ Quand l'original change, recopier le fichier ici.
 | Robot Rush | Robot Rush · Professeur | https://robot-rush.onrender.com/admin |
 | Labo Blocs | Labo Blocs · Parcours (choix du parcours) | https://anlito.github.io/labo-blocs/site/eleves.html |
 | Labo Blocs | Labo Blocs · Professeur (accueil, éditeur, suivi) | https://anlito.github.io/labo-blocs/site/accueil.html |
-| Petit Studio | Petit Studio (pad musical, tablette, hors ligne) | https://anlito.github.io/petit-studio/ |
 | Toute l'année | Carnet de classe | https://anlito.github.io/gestion-de-classe-et-suivi-projet/ |
 | Toute l'année | Sauvegarde du travail des élèves (Windows, à télécharger) | https://anlito.github.io/fichiers/sauvegarde-eleves/SauvegardeEleves.zip |
