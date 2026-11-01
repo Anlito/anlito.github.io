@@ -1,8 +1,9 @@
 # Mes outils de classe
 
 <!-- suivi-maintenance:debut -->
-## État du projet et améliorations documentées — 28 octobre 2026
+## État du projet et améliorations documentées — 1er novembre 2026
 
+- Rubrique Petit Studio ajoutée (couleur `--c-studio`) : pad musical à boucles pour les 3–8 ans, application tablette installable et hors ligne (dépôt `Anlito/petit-studio`). Une fiche élèves, sans accès professeur. Menu et compteurs mis à jour (12 projets · 25 outils).
 - Rubrique 6e SEGPA : la course de voitures à ballon est en ligne (fiche élèves mise à jour, fiche « Voiture à ballon · Professeur » ajoutée avec la course et les gabarits). Compteurs : 11 projets · 24 outils.
 - Une rubrique 6e SEGPA a été ajoutée (couleur `--c-segpa`) : fiche élèves (`segpa/`, le portail des projets SEGPA, sans lien professeur) et fiche professeur (`segpa/professeur.html`, page non liée depuis l'écran des élèves). Menu et compteurs mis à jour (11 projets · 23 outils). Premier projet : « Je démonte un objet technique » (taille-crayon).
 
@@ -85,5 +86,6 @@ Quand l'original change, recopier le fichier ici.
 | Robot Rush | Robot Rush · Professeur | https://robot-rush.onrender.com/admin |
 | Labo Blocs | Labo Blocs · Parcours (choix du parcours) | https://anlito.github.io/labo-blocs/site/eleves.html |
 | Labo Blocs | Labo Blocs · Professeur (accueil, éditeur, suivi) | https://anlito.github.io/labo-blocs/site/accueil.html |
+| Petit Studio | Petit Studio (pad musical, tablette, hors ligne) | https://anlito.github.io/petit-studio/ |
 | Toute l'année | Carnet de classe | https://anlito.github.io/gestion-de-classe-et-suivi-projet/ |
 | Toute l'année | Sauvegarde du travail des élèves (Windows, à télécharger) | https://anlito.github.io/fichiers/sauvegarde-eleves/SauvegardeEleves.zip |
