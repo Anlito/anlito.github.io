@@ -13,7 +13,7 @@
 
 - Une rubrique Escape Lab · 3e a été ajoutée (couleur `--c-escape`) : fiche élèves (`site/`) et fiche professeur (`site/?prof`, avec `prof.html` et `regie.html` en documents). Menu et compteurs mis à jour (9 projets · 19 outils).
 
-- Une rubrique Simon Rétro Game · 5e et 4e a été ajoutée (couleur `--c-simon`) : deux fiches distinctes, accès élèves (avec le tutoriel de câblage) et accès professeur (`prof.html`, avec le mode d’emploi). Menu et compteurs mis à jour (8 projets · 17 outils).
+- Une rubrique Simon Rétro Game · 5e et 4e a été ajoutée (couleur `--c-simon`) : deux fiches distinctes, accès élèves (avec le tutoriel de câblage) et accès professeur (`prof.html`, avec la présentation du projet à la classe et le mode d’emploi). Menu et compteurs mis à jour (8 projets · 17 outils).
 - Une rubrique Labyrinthe robotisé · 5e et 4e a été ajoutée au portail, avec deux fiches distinctes : accès élèves et accès professeur.
 - Le menu, les filtres et les compteurs ont été adaptés. L’affichage sur ordinateur et téléphone ainsi que les liens ont été vérifiés lors de cette amélioration.
 - Les fiches du portail sont dans index.html. Les fichiers proposés au téléchargement depuis fichiers/ restent à synchroniser avec leurs projets d’origine lorsque ces fichiers changent.
