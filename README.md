@@ -1,8 +1,9 @@
 # Mes outils de classe
 
 <!-- suivi-maintenance:debut -->
-## État du projet et améliorations documentées — 3 novembre 2026
+## État du projet et améliorations documentées — 16 novembre 2026
 
+- Nouvelle rubrique **Atelier 3D** (outil commun, couleur `--c-atelier`, placée après Labo Blocs) : une fiche élèves vers https://anlito.github.io/atelier-3d/ (dépôt Anlito/atelier-3d). Modélisation 3D pour l'impression (STL / OBJ), sans accès professeur. Menu et compteurs mis à jour : 12 projets · 25 outils.
 - Rubrique Gestion de classe : fiche « Rendez-vous parents-professeur » ajoutée (dépôt Anlito/rdv-parents). Bouton vers le planning du professeur, bouton « Copier le lien parents » pour le formulaire. Les réponses vont dans un Google Sheet via Apps Script ; la clé n'est écrite nulle part sur le site. Compteurs : 11 projets · 24 outils.
 - Nouvelle page **Mes projets perso** (`perso/index.html`, https://anlito.github.io/perso/) pour les applis de la maison, séparée des outils de classe : Petit Studio, Dragons & découvertes, L'aventure des sons (rubrique « Pour les enfants ») ; Monstre Box et Lé Kdo 2 Noyel (rubrique « En famille »). Mêmes styles et mêmes fiches que la page de classe, couleurs `--c-kids` et `--c-fetes` définies dans la page. Petit Studio a été retiré de la page de classe (retour à 11 projets · 24 outils) ; un lien discret vers la page perso est dans le pied de page.
 - Rubrique 6e SEGPA simplifiée : une fiche Élèves (bouton vers segpa/, liens directs vers chaque projet) et une fiche Professeur (bouton vers segpa/professeur.html, liens directs vers le suivi de chaque projet et la course). Compteurs : 11 projets · 23 outils.
@@ -100,6 +101,7 @@ Quand l'original change, recopier le fichier ici.
 | Robot Rush | Robot Rush · Professeur | https://robot-rush.onrender.com/admin |
 | Labo Blocs | Labo Blocs · Parcours (choix du parcours) | https://anlito.github.io/labo-blocs/site/eleves.html |
 | Labo Blocs | Labo Blocs · Professeur (accueil, éditeur, suivi) | https://anlito.github.io/labo-blocs/site/accueil.html |
+| Atelier 3D | Atelier 3D (modélisation 3D, export STL / OBJ) | https://anlito.github.io/atelier-3d/ |
 | Toute l'année | Carnet de classe | https://anlito.github.io/gestion-de-classe-et-suivi-projet/ |
 | Toute l'année | Rendez-vous parents-professeur · Professeur (planning ; formulaire parents : https://anlito.github.io/rdv-parents/) | https://anlito.github.io/rdv-parents/prof.html |
 | Toute l'année | Sauvegarde du travail des élèves (Windows, à télécharger) | https://anlito.github.io/fichiers/sauvegarde-eleves/SauvegardeEleves.zip |

@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="Les outils pédagogiques de Thomas : distributeur de céréales, Concept Store 3D, site vitrine, théâtre d'ombre, labyrinthe robotisé, Simon Rétro Game, Escape Lab, gestion de classe.">
+<meta name="description" content="Les outils pédagogiques de Thomas : distributeur de céréales, Concept Store 3D, site vitrine, théâtre d'ombre, labyrinthe robotisé, Simon Rétro Game, Escape Lab, Atelier 3D, gestion de classe.">
 <style>:root{color-scheme:light}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
 <title>Mes outils de classe</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,6 +28,7 @@
   --c-escape: #8a6a12;
   --c-mbot: #4338ca;
   --c-segpa: #1d6b38;
+  --c-atelier: #7c3aed;
   --prof: #262c3a;
   --prof-fg: #ffffff;
   --prof-surface: #e9ecf2;
@@ -37,14 +38,14 @@
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
     --bg: #11151d; --surface: #1a202b; --ink: #e8ecf3; --muted: #9aa5b6; --line: #2b3342; --accent: #7c9cff;
-    --c-store: #4fc095; --c-cereales: #f0a83a; --c-ombre: #a68bf0; --c-classe: #4fb0e8; --c-rush: #f2766c; --c-labo: #ec7fbd; --c-labyrinthe: #76bbff; --c-simon: #4fd3d9; --c-escape: #e2c15a; --c-mbot: #a5a2fb; --c-segpa: #6fd08f;
+    --c-store: #4fc095; --c-cereales: #f0a83a; --c-ombre: #a68bf0; --c-classe: #4fb0e8; --c-rush: #f2766c; --c-labo: #ec7fbd; --c-labyrinthe: #76bbff; --c-simon: #4fd3d9; --c-escape: #e2c15a; --c-mbot: #a5a2fb; --c-segpa: #6fd08f; --c-atelier: #b794f6;
     --prof: #dfe4ee; --prof-fg: #141925; --prof-surface: #222937;
     color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
   --bg: #11151d; --surface: #1a202b; --ink: #e8ecf3; --muted: #9aa5b6; --line: #2b3342; --accent: #7c9cff;
-  --c-store: #4fc095; --c-cereales: #f0a83a; --c-ombre: #a68bf0; --c-classe: #4fb0e8; --c-rush: #f2766c; --c-labo: #ec7fbd; --c-labyrinthe: #76bbff; --c-simon: #4fd3d9; --c-escape: #e2c15a; --c-mbot: #a5a2fb; --c-segpa: #6fd08f;
+  --c-store: #4fc095; --c-cereales: #f0a83a; --c-ombre: #a68bf0; --c-classe: #4fb0e8; --c-rush: #f2766c; --c-labo: #ec7fbd; --c-labyrinthe: #76bbff; --c-simon: #4fd3d9; --c-escape: #e2c15a; --c-mbot: #a5a2fb; --c-segpa: #6fd08f; --c-atelier: #b794f6;
     --prof: #dfe4ee; --prof-fg: #141925; --prof-surface: #222937;
   color-scheme: dark;
 }
@@ -123,7 +124,7 @@ footer { margin-top: 12px; padding-top: 20px; border-top: 1px solid var(--line);
       <h1>Mes outils de classe</h1>
       <p class="sub">Tous les outils créés pour mes élèves, rangés par projet. Un clic pour ouvrir, un autre pour copier le lien à partager.</p>
     </div>
-    <span class="count">11 projets · 24 outils</span>
+    <span class="count">12 projets · 25 outils</span>
   </header>
 
   <div class="toolbar">
@@ -143,6 +144,7 @@ footer { margin-top: 12px; padding-top: 20px; border-top: 1px solid var(--line);
     <a href="#theatre" style="--c: var(--c-ombre)">Théâtre d'ombre</a>
     <a href="#robot-rush" style="--c: var(--c-rush)">Robot Rush</a>
     <a href="#labo-blocs" style="--c: var(--c-labo)">Labo Blocs</a>
+    <a href="#atelier-3d" style="--c: var(--c-atelier)">Atelier 3D</a>
     <a href="#classe" style="--c: var(--c-classe)">Gestion de classe</a>
   </nav>
   </div>
@@ -724,6 +726,38 @@ footer { margin-top: 12px; padding-top: 20px; border-top: 1px solid var(--line);
               <li><a href="https://anlito.github.io/labo-blocs/site/prof.html" target="_blank" rel="noopener">Suivi de classe</a></li>
               <li><a href="https://github.com/Anlito/labo-blocs/blob/main/docs/BRIEF-LABO-BLOCS-POUR-UN-PROJET.md" target="_blank" rel="noopener">Relier un nouveau projet à Labo Blocs</a></li>
               <li><a href="https://claude.ai/artifact/NUiEuKMzsMxzubE188MAoH" target="_blank" rel="noopener">Maquette</a></li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== Atelier 3D (outil commun) ===== -->
+    <section class="project" id="atelier-3d" style="--c: var(--c-atelier)">
+      <div class="p-head">
+        <div class="p-level">Outil commun · 5e à 3e</div>
+        <h2>Atelier 3D</h2>
+        <p>Modélisation 3D pour l'impression, plus simple que Tinkercad, avec un assistant qui explique tout en direct. Sert au théâtre d'ombre, à la boîte du Simon, aux décos de robot et aux objets d'escape game.</p>
+        <span class="n">1 outil</span>
+      </div>
+      <div class="tools">
+        <article class="tool">
+          <div class="who"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c0 1.5 3 3 6 3s6-1.5 6-3v-5"/></svg>Pour les élèves</div>
+          <div class="top">
+            <div class="badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.5l8.5 4.8v9.4L12 21.5l-8.5-4.8V7.3z"/><path d="M3.5 7.3L12 12l8.5-4.7M12 12v9.5"/></svg></div>
+            <div><div class="kind">Modélisation 3D · STL / OBJ</div><h3>Atelier 3D</h3></div>
+          </div>
+          <p class="desc">Formes, trous automatiques, perçage en un clic (LED, boutons, câble USB, vis), boîte avec couvercle, silhouette à partir d'un dessin, composants repères (Arduino, micro:bit…), projets guidés qui se cochent tout seuls, puis téléchargement STL ou OBJ. Sans compte, rien n'est envoyé : le travail reste dans le navigateur ou dans un fichier .atelier3d.</p>
+          <div class="actions">
+            <a class="open" href="https://anlito.github.io/atelier-3d/" target="_blank" rel="noopener">Ouvrir l'outil</a>
+            <button class="copy" type="button" data-url="https://anlito.github.io/atelier-3d/">Copier le lien</button>
+          </div>
+          <p class="url">anlito.github.io/atelier-3d</p>
+          <div class="more">
+            <h4>Projets guidés inclus</h4>
+            <ul>
+              <li>Découvrir l'atelier · Théâtre d'ombre : mon personnage · La boîte du jeu Simon · Une déco pour mon robot · Objet d'énigme (escape game)</li>
+              <li><a href="https://github.com/Anlito/atelier-3d" target="_blank" rel="noopener">Code source (GitHub)</a></li>
             </ul>
           </div>
         </article>
