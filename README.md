@@ -1,7 +1,9 @@
 # Mes outils de classe
 
 <!-- suivi-maintenance:debut -->
-## État du projet et améliorations documentées — 16 novembre 2026
+## État du projet et améliorations documentées — 17 novembre 2026
+
+- Fiche **Atelier 3D** : encart « Pour le professeur » ajouté. L'atelier a maintenant un Espace professeur (menu Fichier, protégé par un code dont seule l'empreinte est dans le code source) pour fermer, poste par poste, l'import d'image, les composants et la boîte automatique. Le code n'est écrit nulle part sur le site. Compteurs inchangés (même outil, même adresse).
 
 - Nouvelle rubrique **Atelier 3D** (outil commun, couleur `--c-atelier`, placée après Labo Blocs) : une fiche élèves vers https://anlito.github.io/atelier-3d/ (dépôt Anlito/atelier-3d). Modélisation 3D pour l'impression (STL / OBJ), sans accès professeur. Menu et compteurs mis à jour : 12 projets · 25 outils.
 - Rubrique Gestion de classe : fiche « Rendez-vous parents-professeur » ajoutée (dépôt Anlito/rdv-parents). Bouton vers le planning du professeur, bouton « Copier le lien parents » pour le formulaire. Les réponses vont dans un Google Sheet via Apps Script ; la clé n'est écrite nulle part sur le site. Compteurs : 11 projets · 24 outils.
@@ -101,7 +103,7 @@ Quand l'original change, recopier le fichier ici.
 | Robot Rush | Robot Rush · Professeur | https://robot-rush.onrender.com/admin |
 | Labo Blocs | Labo Blocs · Parcours (choix du parcours) | https://anlito.github.io/labo-blocs/site/eleves.html |
 | Labo Blocs | Labo Blocs · Professeur (accueil, éditeur, suivi) | https://anlito.github.io/labo-blocs/site/accueil.html |
-| Atelier 3D | Atelier 3D (modélisation 3D, export STL / OBJ) | https://anlito.github.io/atelier-3d/ |
+| Atelier 3D | Atelier 3D (modélisation 3D, export STL / OBJ ; Espace professeur dans le menu Fichier) | https://anlito.github.io/atelier-3d/ |
 | Toute l'année | Carnet de classe | https://anlito.github.io/gestion-de-classe-et-suivi-projet/ |
 | Toute l'année | Rendez-vous parents-professeur · Professeur (planning ; formulaire parents : https://anlito.github.io/rdv-parents/) | https://anlito.github.io/rdv-parents/prof.html |
 | Toute l'année | Sauvegarde du travail des élèves (Windows, à télécharger) | https://anlito.github.io/fichiers/sauvegarde-eleves/SauvegardeEleves.zip |
