@@ -94,7 +94,7 @@ Quand l'original change, recopier le fichier ici.
 | Escape Lab | Escape Lab · Élèves | https://anlito.github.io/escape-lab/site/ |
 | Escape Lab | Escape Lab · Professeur (suivi, pilotage, évaluation ; fiches et synchronisation dans prof.html ; regie.html ; presentation.html pour la séance 1) | https://anlito.github.io/escape-lab/site/?prof |
 | mBot Challenge | mBot Challenge · Élèves (fiches à imprimer : fiches.html) | https://anlito.github.io/mbot-challenge/ |
-| mBot Challenge | mBot Challenge · Professeur (régie du tournoi : regie.html, écran projeté) | https://anlito.github.io/mbot-challenge/prof.html |
+| mBot Challenge | mBot Challenge · Professeur (régie du tournoi : regie.html, écran projeté ; régie light : regie-light.html) | https://anlito.github.io/mbot-challenge/prof.html |
 | Théâtre d'ombre | Théâtre d'ombre augmenté | https://anlito.github.io/theatre-ombre/ |
 | Théâtre d'ombre | Théâtre d'ombre · Professeur | https://anlito.github.io/theatre-ombre/prof.html |
 | 6e SEGPA | 6e SEGPA · Élèves (taille-crayon ; voiture à ballon et stop motion à venir) | https://anlito.github.io/segpa/ |
