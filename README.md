@@ -1,7 +1,9 @@
 # Mes outils de classe
 
 <!-- suivi-maintenance:debut -->
-## État du projet et améliorations documentées — 17 novembre 2026
+## État du projet et améliorations documentées — 20 novembre 2026
+
+- Fiche **Carnet de classe** : description complétée avec l'onglet Bulletins (version 1.26.0 du Carnet : constats par élève et par trimestre pour préparer les appréciations, rangés par groupe). Même outil, même adresse : compteurs inchangés.
 
 - Fiche **Atelier 3D** : encart « Pour le professeur » ajouté. L'atelier a maintenant un Espace professeur (menu Fichier, protégé par un code dont seule l'empreinte est dans le code source) pour fermer, poste par poste, l'import d'image, les composants et la boîte automatique. Le code n'est écrit nulle part sur le site. Compteurs inchangés (même outil, même adresse).
 
