@@ -3,6 +3,7 @@
 <!-- suivi-maintenance:debut -->
 ## État du projet et améliorations documentées — 22 novembre 2026
 
+- Page perso, fiche **La boîte à jeux** : description mise à jour, sept jeux. Même adresse : compteurs inchangés.
 - Page perso, fiche **La boîte à jeux** : description complétée (10 niveaux solo par jeu, pièces et album d'autocollants). Même adresse : compteurs inchangés.
 - Page perso, fiche **La boîte à jeux** : description mise à jour avec les deux nouveaux jeux (Sumo-bulles, Les canons). Même adresse : compteurs inchangés.
 - Page perso, rubrique **Pour les enfants** : fiche **La boîte à jeux** ajoutée (dépôt Anlito/boite-a-jeux, https://anlito.github.io/boite-a-jeux/). Mini-jeux de 1 à 4 joueurs sur le même écran, robots, premier jeu Top départ. Compteurs de la page perso : 2 rubriques · 6 applis.
