@@ -3,6 +3,7 @@
 <!-- suivi-maintenance:debut -->
 ## État du projet et améliorations documentées — 22 novembre 2026
 
+- Page perso, fiche **La boîte à jeux** : description mise à jour avec les deux nouveaux jeux (Sumo-bulles, Les canons). Même adresse : compteurs inchangés.
 - Page perso, rubrique **Pour les enfants** : fiche **La boîte à jeux** ajoutée (dépôt Anlito/boite-a-jeux, https://anlito.github.io/boite-a-jeux/). Mini-jeux de 1 à 4 joueurs sur le même écran, robots, premier jeu Top départ. Compteurs de la page perso : 2 rubriques · 6 applis.
 
 - Fiche **Carnet de classe** : description complétée avec l'onglet Bulletins (version 1.26.0 du Carnet : constats par élève et par trimestre pour préparer les appréciations, rangés par groupe). Même outil, même adresse : compteurs inchangés.
