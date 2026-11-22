@@ -1,7 +1,9 @@
 # Mes outils de classe
 
 <!-- suivi-maintenance:debut -->
-## État du projet et améliorations documentées — 20 novembre 2026
+## État du projet et améliorations documentées — 22 novembre 2026
+
+- Page perso, rubrique **Pour les enfants** : fiche **La boîte à jeux** ajoutée (dépôt Anlito/boite-a-jeux, https://anlito.github.io/boite-a-jeux/). Mini-jeux de 1 à 4 joueurs sur le même écran, robots, premier jeu Top départ. Compteurs de la page perso : 2 rubriques · 6 applis.
 
 - Fiche **Carnet de classe** : description complétée avec l'onglet Bulletins (version 1.26.0 du Carnet : constats par élève et par trimestre pour préparer les appréciations, rangés par groupe). Même outil, même adresse : compteurs inchangés.
 
@@ -63,6 +65,7 @@ Les applis faites pour la maison et la famille ne vont pas dans `index.html` mai
 | Pour les enfants | Petit Studio | https://anlito.github.io/petit-studio/ |
 | Pour les enfants | Dragons & découvertes | https://anlito.github.io/Dragonne-et-apprentissages/ |
 | Pour les enfants | L'aventure des sons | https://anlito.github.io/aventure-des-sons/ |
+| Pour les enfants | La boîte à jeux | https://anlito.github.io/boite-a-jeux/ |
 | En famille | Monstre Box | https://anlito.github.io/monstre-box/ |
 | En famille | Lé Kdo 2 Noyel | https://anlito.github.io/noel/ |
 
