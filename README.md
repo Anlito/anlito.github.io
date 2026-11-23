@@ -3,6 +3,7 @@
 <!-- suivi-maintenance:debut -->
 ## État du projet et améliorations documentées — 22 novembre 2026
 
+- Page perso, fiche **La boîte à jeux** : description mise à jour, neuf jeux (Patate chaude ajouté). Même adresse : compteurs inchangés.
 - Page perso, fiche **La boîte à jeux** : description mise à jour, huit jeux (Serpentins ajouté). Même adresse : compteurs inchangés.
 - Page perso, fiche **La boîte à jeux** : description mise à jour, sept jeux. Même adresse : compteurs inchangés.
 - Page perso, fiche **La boîte à jeux** : description complétée (10 niveaux solo par jeu, pièces et album d'autocollants). Même adresse : compteurs inchangés.
