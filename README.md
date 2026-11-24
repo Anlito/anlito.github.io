@@ -1,8 +1,9 @@
 # Mes outils de classe
 
 <!-- suivi-maintenance:debut -->
-## État du projet et améliorations documentées — 22 novembre 2026
+## État du projet et améliorations documentées — 24 novembre 2026
 
+- Rubrique **Labo Blocs** : fiche professeur **La course aux portes** ajoutée (https://anlito.github.io/labo-blocs/site/course.html, mini-championnat mBot + caméra au vidéoprojecteur) et accès direct au parcours élèves `course-portes` dans la fiche Parcours. Compteurs : 12 projets · 26 outils.
 - Page perso, fiche **La boîte à jeux** : description mise à jour, dix jeux (Calcul-éclair ajouté). Même adresse : compteurs inchangés.
 - Page perso, fiche **La boîte à jeux** : description mise à jour, neuf jeux (Patate chaude ajouté). Même adresse : compteurs inchangés.
 - Page perso, fiche **La boîte à jeux** : description mise à jour, huit jeux (Serpentins ajouté). Même adresse : compteurs inchangés.
@@ -114,6 +115,7 @@ Quand l'original change, recopier le fichier ici.
 | Robot Rush | Robot Rush · Professeur | https://robot-rush.onrender.com/admin |
 | Labo Blocs | Labo Blocs · Parcours (choix du parcours) | https://anlito.github.io/labo-blocs/site/eleves.html |
 | Labo Blocs | Labo Blocs · Professeur (accueil, éditeur, suivi) | https://anlito.github.io/labo-blocs/site/accueil.html |
+| Labo Blocs | La course aux portes · Professeur (mini-championnat au vidéoprojecteur ; parcours élèves course-portes, mBot + caméra, 3e) | https://anlito.github.io/labo-blocs/site/course.html |
 | Atelier 3D | Atelier 3D (modélisation 3D, export STL / OBJ ; Espace professeur dans le menu Fichier) | https://anlito.github.io/atelier-3d/ |
 | Toute l'année | Carnet de classe | https://anlito.github.io/gestion-de-classe-et-suivi-projet/ |
 | Toute l'année | Rendez-vous parents-professeur · Professeur (planning ; formulaire parents : https://anlito.github.io/rdv-parents/) | https://anlito.github.io/rdv-parents/prof.html |
