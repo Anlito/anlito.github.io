@@ -3,6 +3,7 @@
 <!-- suivi-maintenance:debut -->
 ## État du projet et améliorations documentées — 24 novembre 2026
 
+- Page perso, fiche **La boîte à jeux** : description mise à jour, dix-sept jeux (La tour bancale et L’orchestre ajoutés). Même adresse : compteurs inchangés.
 - Page perso, fiche **La boîte à jeux** : description mise à jour, quinze jeux (Palet glissant et Quatre à la suite ajoutés). Même adresse : compteurs inchangés.
 - Page perso, fiche **La boîte à jeux** : description mise à jour, treize jeux (Œil de lynx, Paires cachées et Petits bolides ajoutés). Même adresse : compteurs inchangés.
 - Rubrique **Labo Blocs** : fiche professeur **La course aux portes** ajoutée (https://anlito.github.io/labo-blocs/site/course.html, mini-championnat mBot + caméra au vidéoprojecteur) et accès direct au parcours élèves `course-portes` dans la fiche Parcours. Compteurs : 12 projets · 26 outils.
